@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bb2ob0tfmsyqd"
-path="res://.godot/imported/richt leaf.png-1c8d454376e649b803827345be9c8c26.ctex"
+uid="uid://dwy4dk0ylh02w"
+path="res://.godot/imported/icon.svg-70db6c18cf27075cac712663a9620bdd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://richt leaf.png"
-dest_files=["res://.godot/imported/richt leaf.png-1c8d454376e649b803827345be9c8c26.ctex"]
+source_file="res://ART/icon.svg"
+dest_files=["res://.godot/imported/icon.svg-70db6c18cf27075cac712663a9620bdd.ctex"]
 
 [params]
 
@@ -38,3 +38,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

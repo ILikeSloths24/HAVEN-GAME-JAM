@@ -1,0 +1,115 @@
+[gd_scene format=3 uid="uid://cw0pdokp848m4"]
+
+[ext_resource type="Texture2D" uid="uid://b1q3sme4xomf6" path="res://ART/Pinball W background _).png" id="1_ltfqq"]
+[ext_resource type="Script" uid="uid://i1gpkv6ddi8t" path="res://SCRIPTS/flipper.gd" id="3_5j11q"]
+[ext_resource type="Texture2D" uid="uid://c0pekjhtv7svi" path="res://ART/635812117569314004_360.png" id="4_63oq4"]
+[ext_resource type="Script" uid="uid://djv833xpjlgfr" path="res://SCRIPTS/flipper_2.gd" id="5_f8h2c"]
+[ext_resource type="Texture2D" uid="uid://du4g5tvlsndfo" path="res://ART/i hope this works.png" id="6_fv040"]
+[ext_resource type="Texture2D" uid="uid://bk2u3vjwfev55" path="res://ART/Sprite-0004.png" id="7_ggca4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7jktm"]
+size = Vector2(50, 28)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5j11q"]
+friction = 0.02
+bounce = 0.05
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_63oq4"]
+radius = 27.018513
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ltfqq"]
+size = Vector2(41, 920)
+
+[node name="Node2D" type="Node2D" unique_id=979197503]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=105843388]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -293.0
+offset_top = -395.0
+offset_right = 355.0
+offset_bottom = 757.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.83394516, 0.75709456)
+texture = ExtResource("1_ltfqq")
+metadata/_edit_use_anchors_ = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1727861740]
+position = Vector2(-23, 40)
+scale = Vector2(0.94845325, 1.3277599)
+
+[node name="Flipper" type="RigidBody2D" parent="." unique_id=1440842092]
+position = Vector2(-191, 327)
+freeze = true
+freeze_mode = 1
+script = ExtResource("3_5j11q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Flipper" unique_id=1208230825]
+position = Vector2(66.90106, -0.09893799)
+scale = Vector2(2.9600003, 2.9600003)
+shape = SubResource("RectangleShape2D_7jktm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Flipper" unique_id=1918496878]
+position = Vector2(64.90106, 0.901062)
+rotation = -2.420959
+scale = Vector2(2.22, 2.22)
+texture = ExtResource("4_63oq4")
+
+[node name="Flipper2" type="RigidBody2D" parent="." unique_id=2013578115]
+position = Vector2(167, 326)
+freeze = true
+freeze_mode = 1
+script = ExtResource("5_f8h2c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Flipper2" unique_id=1279118693]
+position = Vector2(-70.30723, 0.69277954)
+scale = Vector2(2.9600003, 2.9600003)
+shape = SubResource("RectangleShape2D_7jktm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Flipper2" unique_id=273800345]
+position = Vector2(-66.30722, 0.69278145)
+rotation = 2.4462025
+scale = Vector2(2.22, 2.22)
+texture = ExtResource("6_fv040")
+
+[node name="Ball" type="RigidBody2D" parent="." unique_id=2008901649]
+position = Vector2(-122, -39)
+physics_material_override = SubResource("PhysicsMaterial_5j11q")
+gravity_scale = 1.5
+lock_rotation = true
+continuous_cd = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball" unique_id=1740048330]
+shape = SubResource("CircleShape2D_63oq4")
+
+[node name="Sprite2D" type="Sprite2D" parent="Ball" unique_id=218596478]
+position = Vector2(-43.000008, -20.000008)
+scale = Vector2(2.7499998, 2.7499998)
+texture = ExtResource("7_ggca4")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1699044917]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=625357927]
+position = Vector2(-311, 38)
+shape = SubResource("RectangleShape2D_ltfqq")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1939461391]
+position = Vector2(267, 32)
+shape = SubResource("RectangleShape2D_ltfqq")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1842466363]
+position = Vector2(-35, -411.99997)
+rotation = -1.5727174
+shape = SubResource("RectangleShape2D_ltfqq")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=1258065452]
+position = Vector2(-601.99994, 99.000015)
+rotation = -1.0859029
+shape = SubResource("RectangleShape2D_ltfqq")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=1027061042]
+position = Vector2(592, 133.99997)
+rotation = -1.9607728
+shape = SubResource("RectangleShape2D_ltfqq")

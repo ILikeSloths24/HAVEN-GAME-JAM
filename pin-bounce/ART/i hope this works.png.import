@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cydvx38ckyaqv"
-path="res://.godot/imported/right leaf.png-251e2e20ae3b6c894db65a2a0d59d1fc.ctex"
+uid="uid://du4g5tvlsndfo"
+path="res://.godot/imported/i hope this works.png-1aa77b4c05fde46126eedc5770cf9ee0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://right leaf.png"
-dest_files=["res://.godot/imported/right leaf.png-251e2e20ae3b6c894db65a2a0d59d1fc.ctex"]
+source_file="res://ART/i hope this works.png"
+dest_files=["res://.godot/imported/i hope this works.png-1aa77b4c05fde46126eedc5770cf9ee0.ctex"]
 
 [params]
 

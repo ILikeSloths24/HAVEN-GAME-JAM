@@ -13,12 +13,12 @@ config_version=5
 config/name="PinBounce"
 run/main_scene="uid://cw0pdokp848m4"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://ART/icon.svg"
 
 [display]
 
-window/size/viewport_width=648
-window/size/viewport_height=1152
+window/size/viewport_width=540
+window/size/viewport_height=870
 
 [input]
 

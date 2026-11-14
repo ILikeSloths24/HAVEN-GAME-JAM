@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://cw0pdokp848m4"]
 
 [ext_resource type="Texture2D" uid="uid://b1q3sme4xomf6" path="res://ART/Pinball W background _).png" id="1_ltfqq"]
+[ext_resource type="Texture2D" uid="uid://bmmsrwopws8r5" path="res://ART/logggg.png" id="2_5j11q"]
 [ext_resource type="Script" uid="uid://i1gpkv6ddi8t" path="res://SCRIPTS/flipper.gd" id="3_5j11q"]
 [ext_resource type="Texture2D" uid="uid://c0pekjhtv7svi" path="res://ART/635812117569314004_360.png" id="4_63oq4"]
 [ext_resource type="Script" uid="uid://djv833xpjlgfr" path="res://SCRIPTS/flipper_2.gd" id="5_f8h2c"]
 [ext_resource type="Texture2D" uid="uid://du4g5tvlsndfo" path="res://ART/i hope this works.png" id="6_fv040"]
 [ext_resource type="Texture2D" uid="uid://cpb8lv2i6hsb0" path="res://ART/New Piskel.png" id="7_5j11q"]
 [ext_resource type="Texture2D" uid="uid://bk2u3vjwfev55" path="res://ART/Sprite-0004.png" id="7_ggca4"]
+[ext_resource type="Script" uid="uid://be55s6yy3d5vx" path="res://SCENES/bumper.gd" id="8_63oq4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7jktm"]
 size = Vector2(50, 28)
@@ -18,8 +20,7 @@ bounce = 0.05
 [sub_resource type="CircleShape2D" id="CircleShape2D_63oq4"]
 radius = 27.018513
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ltfqq"]
-size = Vector2(41, 920)
+[sub_resource type="CircleShape2D" id="CircleShape2D_ggca4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_63oq4"]
 atlas = ExtResource("7_5j11q")
@@ -50,7 +51,11 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ggca4"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_f8h2c"]
+radius = 11.972786
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ltfqq"]
+size = Vector2(41, 920)
 
 [node name="Node2D" type="Node2D" unique_id=979197503]
 
@@ -72,8 +77,20 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(-23, 40)
 scale = Vector2(0.94845325, 1.3277599)
 
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=250751333]
+position = Vector2(-245.21002, 363.9474)
+rotation = -0.22555453
+scale = Vector2(3.6399994, 3.6399994)
+texture = ExtResource("2_5j11q")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1637295111]
+position = Vector2(214.79, 369.9474)
+rotation = 1.9915146
+scale = Vector2(3.6399994, 3.6399994)
+texture = ExtResource("2_5j11q")
+
 [node name="Flipper" type="RigidBody2D" parent="." unique_id=1440842092]
-position = Vector2(-191, 327)
+position = Vector2(-195.21002, 397.9474)
 freeze = true
 freeze_mode = 1
 script = ExtResource("3_5j11q")
@@ -90,7 +107,7 @@ scale = Vector2(2.22, 2.22)
 texture = ExtResource("4_63oq4")
 
 [node name="Flipper2" type="RigidBody2D" parent="." unique_id=2013578115]
-position = Vector2(167, 326)
+position = Vector2(162.78998, 396.9474)
 freeze = true
 freeze_mode = 1
 script = ExtResource("5_f8h2c")
@@ -121,6 +138,26 @@ position = Vector2(-43.000008, -20.000008)
 scale = Vector2(2.7499998, 2.7499998)
 texture = ExtResource("7_ggca4")
 
+[node name="Bumper" type="StaticBody2D" parent="." unique_id=293018127]
+position = Vector2(-159, -198)
+scale = Vector2(4.5937514, 4.8125)
+script = ExtResource("8_63oq4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bumper" unique_id=1399780241]
+position = Vector2(3.9183729, 1.8701298)
+shape = SubResource("CircleShape2D_ggca4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Bumper" unique_id=1358051117]
+sprite_frames = SubResource("SpriteFrames_3mqob")
+frame = 1
+frame_progress = 0.06812516
+
+[node name="HitZone" type="Area2D" parent="Bumper" unique_id=1446779831]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bumper/HitZone" unique_id=523089958]
+position = Vector2(3.9183729, 1.8701298)
+shape = SubResource("CircleShape2D_f8h2c")
+
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1699044917]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=625357927]
@@ -137,24 +174,13 @@ rotation = -1.5727174
 shape = SubResource("RectangleShape2D_ltfqq")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=1258065452]
-position = Vector2(-601.99994, 99.000015)
+position = Vector2(-598, 169)
 rotation = -1.0859029
 shape = SubResource("RectangleShape2D_ltfqq")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=1027061042]
-position = Vector2(592, 133.99997)
+position = Vector2(595.99994, 203.99997)
 rotation = -1.9607728
 shape = SubResource("RectangleShape2D_ltfqq")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1358051117]
-position = Vector2(-297.00003, -244)
-scale = Vector2(4.5937514, 4.8125)
-sprite_frames = SubResource("SpriteFrames_3mqob")
-frame = 1
-frame_progress = 0.06812516
-
-[node name="StaticBody2D" type="StaticBody2D" parent="AnimatedSprite2D" unique_id=293018127]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/StaticBody2D" unique_id=1399780241]
-position = Vector2(3.9183729, 1.8701298)
-shape = SubResource("CircleShape2D_ggca4")
+[connection signal="body_entered" from="Bumper/HitZone" to="Bumper" method="_on_hit_zone_body_entered"]

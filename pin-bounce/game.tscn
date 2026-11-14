@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://cw0pdokp848m4"]
 
 [ext_resource type="Texture2D" uid="uid://m0lwj7vrud8v" path="res://ART/slime idle animation.png" id="1_80nbo"]
+[ext_resource type="Script" uid="uid://i1gpkv6ddi8t" path="res://flipper.gd" id="2_feb5d"]
+[ext_resource type="Texture2D" uid="uid://c0pekjhtv7svi" path="res://635812117569314004_360.png" id="3_fc0e3"]
+[ext_resource type="Script" uid="uid://djv833xpjlgfr" path="res://flipper_2.gd" id="4_fc0e3"]
+[ext_resource type="Texture2D" uid="uid://cydvx38ckyaqv" path="res://right leaf.png" id="5_7jktm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e2o6t"]
 atlas = ExtResource("1_80nbo")
@@ -164,13 +168,51 @@ animations = [{
 "speed": 15.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7jktm"]
+size = Vector2(50, 28)
+
 [node name="Node2D" type="Node2D" unique_id=979197503]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=999789391]
-position = Vector2(318, 159)
-scale = Vector2(5.96875, 5.96875)
+position = Vector2(314.99997, 533)
+scale = Vector2(3.0000002, 3.0000002)
 sprite_frames = SubResource("SpriteFrames_f1jbl")
 frame = 10
 frame_progress = 0.9668337
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1727861740]
+
+[node name="Flipper" type="RigidBody2D" parent="." unique_id=1440842092]
+position = Vector2(-126, 223)
+freeze = true
+freeze_mode = 1
+script = ExtResource("2_feb5d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Flipper" unique_id=1208230825]
+position = Vector2(25, 11)
+scale = Vector2(2.9600003, 2.9600003)
+shape = SubResource("RectangleShape2D_7jktm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Flipper" unique_id=1918496878]
+position = Vector2(23.000002, 12.000001)
+rotation = 0.67932534
+scale = Vector2(2.22, 2.22)
+texture = ExtResource("3_fc0e3")
+
+[node name="Flipper2" type="RigidBody2D" parent="." unique_id=1123971578]
+position = Vector2(-63, 223)
+freeze = true
+freeze_mode = 1
+script = ExtResource("4_fc0e3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Flipper2" unique_id=1241444585]
+position = Vector2(163.34949, 11.349495)
+scale = Vector2(2.9999995, 2.9999995)
+shape = SubResource("RectangleShape2D_7jktm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Flipper2" unique_id=812219819]
+position = Vector2(165.34949, 12.349488)
+rotation = 0.8819145
+scale = Vector2(2.25, 2.25)
+texture = ExtResource("5_7jktm")
+flip_v = true

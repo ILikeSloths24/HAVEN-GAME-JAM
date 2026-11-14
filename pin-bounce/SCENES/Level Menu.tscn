@@ -1,9 +1,56 @@
 [gd_scene format=3 uid="uid://bunc4rkhgakyx"]
 
 [ext_resource type="Texture2D" uid="uid://dxh2loj10lq2g" path="res://ART/Level Menu.png" id="1_c4mnj"]
+[ext_resource type="Script" uid="uid://cgklaisfk5mfw" path="res://SCENES/level_menu.gd" id="1_l6qrg"]
 [ext_resource type="FontFile" uid="uid://kkvbts3uf0gg" path="res://ART/augiepixel.ttf" id="2_2ipby"]
+[ext_resource type="Texture2D" uid="uid://cg58ax0fxlimh" path="res://ART/LEVELSLSLSLS (1).png" id="4_xa182"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cn180"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nxscl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tkkbj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hbexh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g6ahx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yb8x7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t68he"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t2ucq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lhtyg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3gsx4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_veady"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l6qrg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xa182"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_61vb6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c608j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b7xj4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7cdf3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fr5o7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h4joh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6ukmm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jdyv5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a3tuo"]
 
 [node name="LevelMenu" type="Node2D" unique_id=1393051437]
+script = ExtResource("1_l6qrg")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1411712608]
 offset_right = 94.0
@@ -21,3 +68,56 @@ theme_override_fonts/font = ExtResource("2_2ipby")
 theme_override_font_sizes/font_size = 12
 text = "Daven holding 
 hackclub flag!"
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=964313622]
+offset_top = 73.00001
+offset_right = 128.0
+offset_bottom = 201.0
+scale = Vector2(4.219437, 5.7250996)
+texture = ExtResource("4_xa182")
+
+[node name="Button" type="Button" parent="." unique_id=2117487209]
+offset_left = 174.00002
+offset_top = 331.0
+offset_right = 182.00002
+offset_bottom = 339.0
+scale = Vector2(23.97019, -12.193595)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_cn180")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_nxscl")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tkkbj")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_hbexh")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g6ahx")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_yb8x7")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_t68he")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_t2ucq")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_lhtyg")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_3gsx4")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_veady")
+
+[node name="Button2" type="Button" parent="." unique_id=1595264446]
+offset_left = 170.00002
+offset_top = 396.00003
+offset_right = 178.00002
+offset_bottom = 404.00003
+scale = Vector2(25.195187, 11.522496)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_l6qrg")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_xa182")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_61vb6")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_c608j")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_b7xj4")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_7cdf3")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_fr5o7")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_h4joh")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_6ukmm")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_jdyv5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_a3tuo")
+
+[node name="Button3" type="Button" parent="." unique_id=465301778]
+offset_left = 165.0
+offset_top = 558.0
+offset_right = 173.0
+offset_bottom = 566.0
+scale = Vector2(25.743074, 9.836334)
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

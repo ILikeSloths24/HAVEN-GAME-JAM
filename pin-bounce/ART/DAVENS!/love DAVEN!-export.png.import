@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://53wg17d5caeq"
-path="res://.godot/imported/DAVEN!.png-3985205dcc57de3901d5222d40bd5b57.ctex"
+uid="uid://tamf6j06oaot"
+path="res://.godot/imported/love DAVEN!-export.png-6cd5babc0a968517fe022bd48b0cc624.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ART/DAVEN!.png"
-dest_files=["res://.godot/imported/DAVEN!.png-3985205dcc57de3901d5222d40bd5b57.ctex"]
+source_file="res://ART/DAVENS!/love DAVEN!-export.png"
+dest_files=["res://.godot/imported/love DAVEN!-export.png-6cd5babc0a968517fe022bd48b0cc624.ctex"]
 
 [params]
 

@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bk2u3vjwfev55" path="res://ART/Sprite-0004.png" id="7_ggca4"]
 [ext_resource type="Script" uid="uid://be55s6yy3d5vx" path="res://SCENES/bumper.gd" id="8_63oq4"]
 [ext_resource type="FontFile" uid="uid://kkvbts3uf0gg" path="res://ART/augiepixel.ttf" id="10_f8h2c"]
-[ext_resource type="Texture2D" uid="uid://53wg17d5caeq" path="res://ART/DAVEN!.png" id="11_rbqhu"]
+[ext_resource type="Texture2D" path="res://ART/DAVEN!.png" id="11_rbqhu"]
 [ext_resource type="Texture2D" uid="uid://3sco0e6437ql" path="res://ART/speech bubble.png" id="12_gihg8"]
 [ext_resource type="Script" uid="uid://cgrix87r3kpc6" path="res://SCENES/shooter.gd" id="12_qmtrq"]
 [ext_resource type="Texture2D" uid="uid://dkwm2p66qat38" path="res://ART/SHOOTER.png" id="13_qmtrq"]

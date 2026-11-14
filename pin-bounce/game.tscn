@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cw0pdokp848m4"]
 
 [ext_resource type="Texture2D" uid="uid://m0lwj7vrud8v" path="res://ART/slime idle animation.png" id="1_80nbo"]
+[ext_resource type="Texture2D" uid="uid://b1q3sme4xomf6" path="res://ART/Pinball W background _).png" id="1_ryrav"]
 [ext_resource type="Script" uid="uid://i1gpkv6ddi8t" path="res://flipper.gd" id="2_feb5d"]
 [ext_resource type="Texture2D" uid="uid://c0pekjhtv7svi" path="res://635812117569314004_360.png" id="3_fc0e3"]
 [ext_resource type="Script" uid="uid://djv833xpjlgfr" path="res://flipper_2.gd" id="4_fc0e3"]
@@ -173,12 +174,24 @@ size = Vector2(50, 28)
 
 [node name="Node2D" type="Node2D" unique_id=979197503]
 
+[node name="TextureRect" type="TextureRect" parent="." unique_id=105843388]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -324.0
+offset_top = -576.0
+offset_right = 324.0
+offset_bottom = 576.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ryrav")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=999789391]
 position = Vector2(314.99997, 533)
 scale = Vector2(3.0000002, 3.0000002)
 sprite_frames = SubResource("SpriteFrames_f1jbl")
-frame = 10
-frame_progress = 0.9668337
+frame = 12
+frame_progress = 0.3710832
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1727861740]
 

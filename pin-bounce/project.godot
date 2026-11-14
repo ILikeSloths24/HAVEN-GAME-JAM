@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="PinBounce"
-run/main_scene="uid://cw0pdokp848m4"
+run/main_scene="uid://dsctilsc27lkn"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://ART/icon.svg"
 

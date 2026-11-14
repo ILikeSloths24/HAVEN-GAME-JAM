@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://c0pekjhtv7svi" path="res://ART/635812117569314004_360.png" id="4_63oq4"]
 [ext_resource type="Script" uid="uid://djv833xpjlgfr" path="res://SCRIPTS/flipper_2.gd" id="5_f8h2c"]
 [ext_resource type="Texture2D" uid="uid://du4g5tvlsndfo" path="res://ART/i hope this works.png" id="6_fv040"]
+[ext_resource type="Texture2D" uid="uid://cpb8lv2i6hsb0" path="res://ART/New Piskel.png" id="7_5j11q"]
 [ext_resource type="Texture2D" uid="uid://bk2u3vjwfev55" path="res://ART/Sprite-0004.png" id="7_ggca4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7jktm"]
@@ -19,6 +20,37 @@ radius = 27.018513
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ltfqq"]
 size = Vector2(41, 920)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_63oq4"]
+atlas = ExtResource("7_5j11q")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f8h2c"]
+atlas = ExtResource("7_5j11q")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fv040"]
+atlas = ExtResource("7_5j11q")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3mqob"]
+animations = [{
+"frames": [{
+"duration": 0.8,
+"texture": SubResource("AtlasTexture_63oq4")
+}, {
+"duration": 0.8,
+"texture": SubResource("AtlasTexture_f8h2c")
+}, {
+"duration": 0.8,
+"texture": SubResource("AtlasTexture_fv040")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ggca4"]
 
 [node name="Node2D" type="Node2D" unique_id=979197503]
 
@@ -113,3 +145,16 @@ shape = SubResource("RectangleShape2D_ltfqq")
 position = Vector2(592, 133.99997)
 rotation = -1.9607728
 shape = SubResource("RectangleShape2D_ltfqq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1358051117]
+position = Vector2(-297.00003, -244)
+scale = Vector2(4.5937514, 4.8125)
+sprite_frames = SubResource("SpriteFrames_3mqob")
+frame = 1
+frame_progress = 0.06812516
+
+[node name="StaticBody2D" type="StaticBody2D" parent="AnimatedSprite2D" unique_id=293018127]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/StaticBody2D" unique_id=1399780241]
+position = Vector2(3.9183729, 1.8701298)
+shape = SubResource("CircleShape2D_ggca4")

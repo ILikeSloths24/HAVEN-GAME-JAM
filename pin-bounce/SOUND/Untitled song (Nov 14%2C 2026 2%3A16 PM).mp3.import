@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dtmax44ilione"
+path="res://.godot/imported/Untitled song (Nov 14%2C 2026 2%3A16 PM).mp3-fda2dfd3d45efe8842e8207fda5e9f08.mp3str"
+
+[deps]
+
+source_file="res://SOUND/Untitled song (Nov 14%2C 2026 2%3A16 PM).mp3"
+dest_files=["res://.godot/imported/Untitled song (Nov 14%2C 2026 2%3A16 PM).mp3-fda2dfd3d45efe8842e8207fda5e9f08.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

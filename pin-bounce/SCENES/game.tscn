@@ -10,11 +10,11 @@
 [ext_resource type="Texture2D" uid="uid://bk2u3vjwfev55" path="res://ART/Sprite-0004.png" id="7_ggca4"]
 [ext_resource type="Script" uid="uid://be55s6yy3d5vx" path="res://SCENES/bumper.gd" id="8_63oq4"]
 [ext_resource type="FontFile" uid="uid://kkvbts3uf0gg" path="res://ART/augiepixel.ttf" id="10_f8h2c"]
-[ext_resource type="Texture2D" path="res://ART/DAVEN!.png" id="11_rbqhu"]
+[ext_resource type="Texture2D" uid="uid://53wg17d5caeq" path="res://ART/DAVENS!/DAVEN!.png" id="11_rbqhu"]
 [ext_resource type="Texture2D" uid="uid://3sco0e6437ql" path="res://ART/speech bubble.png" id="12_gihg8"]
 [ext_resource type="Script" uid="uid://cgrix87r3kpc6" path="res://SCENES/shooter.gd" id="12_qmtrq"]
 [ext_resource type="Texture2D" uid="uid://dkwm2p66qat38" path="res://ART/SHOOTER.png" id="13_qmtrq"]
-[ext_resource type="Texture2D" uid="uid://pavhwjwu5llq" path="res://ART/line.png" id="14_4no2h"]
+[ext_resource type="Texture2D" uid="uid://nhxflox03pwq" path="res://ART/Thing.png" id="15_4no2h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7jktm"]
 size = Vector2(50, 28)
@@ -51,6 +51,27 @@ size = Vector2(164.26262, 14.205753)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_04cm2"]
 size = Vector2(465, 20)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4no2h"]
+radius = 25.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_13r1y"]
+size = Vector2(52, 21)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yqmr7"]
+size = Vector2(92.52325, 63.79298)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5t354"]
+size = Vector2(31, 87)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wmg3d"]
+radius = 7.388228
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_riuho"]
+radius = 38.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4no2h"]
+size = Vector2(98.2043, 13.383926)
 
 [node name="Node2D" type="Node2D" unique_id=979197503]
 script = ExtResource("1_fv040")
@@ -185,7 +206,7 @@ offset_top = 50.000004
 offset_right = 164.0
 offset_bottom = 96.0
 scale = Vector2(0.57449985, 0.57449985)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.9882353, 0.5254902, 0.08627451, 1)
 theme_override_fonts/font = ExtResource("10_f8h2c")
 theme_override_font_sizes/font_size = 47
 text = "DAVEN"
@@ -248,9 +269,9 @@ shape = SubResource("RectangleShape2D_qmtrq")
 one_way_collision = true
 
 [node name="Divider pole" type="Sprite2D" parent="." unique_id=1420555455]
-position = Vector2(181, 204)
-scale = Vector2(-5.289566, 29.998236)
-texture = ExtResource("14_4no2h")
+position = Vector2(171, 104)
+scale = Vector2(-8.817, 50)
+texture = ExtResource("15_4no2h")
 
 [node name="DrainZone" type="Area2D" parent="." unique_id=1383838595]
 
@@ -260,6 +281,41 @@ shape = SubResource("RectangleShape2D_04cm2")
 
 [node name="LauncherSpawn" type="Marker2D" parent="." unique_id=918012094]
 position = Vector2(214, 325)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=977308171]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1361881771]
+position = Vector2(-270, -73)
+shape = SubResource("CircleShape2D_4no2h")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1224517795]
+position = Vector2(-295, -103.000015)
+rotation = 0.5952921
+shape = SubResource("RectangleShape2D_13r1y")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=181963077]
+position = Vector2(115.00001, -51.000004)
+rotation = 0.36843303
+scale = Vector2(1.0337545, 1.5037581)
+shape = SubResource("RectangleShape2D_yqmr7")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=1791130737]
+position = Vector2(156.5, -32.5)
+shape = SubResource("RectangleShape2D_5t354")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=349905352]
+position = Vector2(-27, -287)
+scale = Vector2(7.2988443, 5.5373015)
+shape = SubResource("CircleShape2D_wmg3d")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D" unique_id=652980345]
+position = Vector2(-296, -232)
+shape = SubResource("CircleShape2D_riuho")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D" unique_id=2132993153]
+position = Vector2(133.01584, -134.04039)
+rotation = -0.57497424
+shape = SubResource("RectangleShape2D_4no2h")
 
 [connection signal="body_entered" from="Bumper/HitZone" to="Bumper" method="_on_hit_zone_body_entered"]
 [connection signal="body_entered" from="DrainZone" to="." method="_on_drain_zone_body_entered"]

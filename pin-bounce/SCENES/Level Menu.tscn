@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bunc4rkhgakyx"]
+
+[ext_resource type="Texture2D" uid="uid://dxh2loj10lq2g" path="res://ART/Level Menu.png" id="1_c4mnj"]
+
+[node name="LevelMenu" type="Node2D" unique_id=1393051437]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1411712608]
+offset_right = 94.0
+offset_bottom = 128.0
+scale = Vector2(5.7441626, 6.796307)
+texture = ExtResource("1_c4mnj")

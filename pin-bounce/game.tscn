@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://i1gpkv6ddi8t" path="res://flipper.gd" id="2_feb5d"]
 [ext_resource type="Texture2D" uid="uid://c0pekjhtv7svi" path="res://635812117569314004_360.png" id="3_fc0e3"]
 [ext_resource type="Script" uid="uid://djv833xpjlgfr" path="res://flipper_2.gd" id="4_fc0e3"]
-[ext_resource type="Texture2D" uid="uid://cydvx38ckyaqv" path="res://right leaf.png" id="5_7jktm"]
+[ext_resource type="Texture2D" uid="uid://du4g5tvlsndfo" path="res://i hope this works.png" id="5_7jktm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e2o6t"]
 atlas = ExtResource("1_80nbo")
@@ -183,36 +183,35 @@ frame_progress = 0.9668337
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1727861740]
 
 [node name="Flipper" type="RigidBody2D" parent="." unique_id=1440842092]
-position = Vector2(-126, 223)
+position = Vector2(-156, 233)
 freeze = true
 freeze_mode = 1
 script = ExtResource("2_feb5d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Flipper" unique_id=1208230825]
-position = Vector2(25, 11)
+position = Vector2(66.90106, -0.09893799)
 scale = Vector2(2.9600003, 2.9600003)
 shape = SubResource("RectangleShape2D_7jktm")
 
 [node name="Sprite2D" type="Sprite2D" parent="Flipper" unique_id=1918496878]
-position = Vector2(23.000002, 12.000001)
-rotation = 0.67932534
+position = Vector2(64.90106, 0.901062)
+rotation = -2.420959
 scale = Vector2(2.22, 2.22)
 texture = ExtResource("3_fc0e3")
 
-[node name="Flipper2" type="RigidBody2D" parent="." unique_id=1123971578]
-position = Vector2(-63, 223)
+[node name="Flipper2" type="RigidBody2D" parent="." unique_id=2013578115]
+position = Vector2(144, 234)
 freeze = true
 freeze_mode = 1
 script = ExtResource("4_fc0e3")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Flipper2" unique_id=1241444585]
-position = Vector2(163.34949, 11.349495)
-scale = Vector2(2.9999995, 2.9999995)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Flipper2" unique_id=1279118693]
+position = Vector2(-70.30723, 0.69277954)
+scale = Vector2(2.9600003, 2.9600003)
 shape = SubResource("RectangleShape2D_7jktm")
 
-[node name="Sprite2D" type="Sprite2D" parent="Flipper2" unique_id=812219819]
-position = Vector2(165.34949, 12.349488)
-rotation = 0.8819145
-scale = Vector2(2.25, 2.25)
+[node name="Sprite2D" type="Sprite2D" parent="Flipper2" unique_id=273800345]
+position = Vector2(-66.30722, 0.69278145)
+rotation = 2.4462025
+scale = Vector2(2.22, 2.22)
 texture = ExtResource("5_7jktm")
-flip_v = true

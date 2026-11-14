@@ -1,6 +1,6 @@
 extends RigidBody2D
 
-var rotation_value = 15
+var rotation_value = -15
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	if Input.is_action_pressed("Left flipper"):

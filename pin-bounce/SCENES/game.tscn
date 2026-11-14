@@ -2,19 +2,18 @@
 
 [ext_resource type="Script" uid="uid://3euyonfm24n1" path="res://SCENES/game.gd" id="1_fv040"]
 [ext_resource type="Texture2D" uid="uid://b1q3sme4xomf6" path="res://ART/Pinball W background _).png" id="1_ltfqq"]
-[ext_resource type="Texture2D" uid="uid://bmmsrwopws8r5" path="res://ART/logggg.png" id="2_5j11q"]
 [ext_resource type="Script" uid="uid://i1gpkv6ddi8t" path="res://SCRIPTS/flipper.gd" id="3_5j11q"]
-[ext_resource type="Texture2D" uid="uid://c0pekjhtv7svi" path="res://ART/635812117569314004_360.png" id="4_63oq4"]
+[ext_resource type="Texture2D" uid="uid://cmbncgevkhxa" path="res://ART/DAVENS!/daven hold right.png" id="3_rbqhu"]
+[ext_resource type="Texture2D" uid="uid://b8fyavboo8ve5" path="res://ART/DAVENS!/daven hold left.png" id="3_s6nxh"]
 [ext_resource type="Script" uid="uid://djv833xpjlgfr" path="res://SCRIPTS/flipper_2.gd" id="5_f8h2c"]
-[ext_resource type="Texture2D" uid="uid://du4g5tvlsndfo" path="res://ART/i hope this works.png" id="6_fv040"]
+[ext_resource type="Texture2D" uid="uid://cvjqi00ibsm0x" path="res://ART/HACK CLUB FLAG.png" id="6_s6nxh"]
 [ext_resource type="Texture2D" uid="uid://bk2u3vjwfev55" path="res://ART/Sprite-0004.png" id="7_ggca4"]
 [ext_resource type="Script" uid="uid://be55s6yy3d5vx" path="res://SCENES/bumper.gd" id="8_63oq4"]
+[ext_resource type="Texture2D" uid="uid://dxc22m41tvyx" path="res://ART/HACK CLUB FLAG2.png" id="8_s6nxh"]
 [ext_resource type="FontFile" uid="uid://kkvbts3uf0gg" path="res://ART/augiepixel.ttf" id="10_f8h2c"]
 [ext_resource type="Texture2D" uid="uid://53wg17d5caeq" path="res://ART/DAVENS!/DAVEN!.png" id="11_rbqhu"]
 [ext_resource type="Texture2D" uid="uid://3sco0e6437ql" path="res://ART/speech bubble.png" id="12_gihg8"]
-[ext_resource type="Script" uid="uid://cgrix87r3kpc6" path="res://SCENES/shooter.gd" id="12_qmtrq"]
-[ext_resource type="Texture2D" uid="uid://dkwm2p66qat38" path="res://ART/SHOOTER.png" id="13_qmtrq"]
-[ext_resource type="Texture2D" uid="uid://nhxflox03pwq" path="res://ART/Thing.png" id="15_4no2h"]
+[ext_resource type="Texture2D" uid="uid://loclvrsohoic" path="res://ART/DAVENS!/happy DAVEN!-export.png" id="14_qmtrq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7jktm"]
 size = Vector2(50, 28)
@@ -31,23 +30,16 @@ radius = 27.018513
 [sub_resource type="CircleShape2D" id="CircleShape2D_f8h2c"]
 radius = 11.972786
 
+[sub_resource type="Theme" id="Theme_s6nxh"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ltfqq"]
 size = Vector2(41, 920)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s6nxh"]
-size = Vector2(149.48184, 46.025787)
+size = Vector2(168.09953, 46.025787)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rbqhu"]
 size = Vector2(133, 81)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gihg8"]
-size = Vector2(72.81105, 16.01671)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2euu5"]
-size = Vector2(14.322622, 734.11475)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qmtrq"]
-size = Vector2(164.26262, 14.205753)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_04cm2"]
 size = Vector2(465, 20)
@@ -73,6 +65,9 @@ radius = 38.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4no2h"]
 size = Vector2(98.2043, 13.383926)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qmtrq"]
+size = Vector2(544, 117)
+
 [node name="Node2D" type="Node2D" unique_id=979197503]
 script = ExtResource("1_fv040")
 
@@ -94,20 +89,20 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(-23, 40)
 scale = Vector2(0.94845325, 1.3277599)
 
-[node name="Log2" type="Sprite2D" parent="." unique_id=250751333]
-position = Vector2(-260, 368)
-rotation = -0.22555453
-scale = Vector2(3.4347417, 3.4347417)
-texture = ExtResource("2_5j11q")
-
-[node name="Log" type="Sprite2D" parent="." unique_id=1637295111]
-position = Vector2(117, 375)
-rotation = 1.9915146
+[node name="DAVEN HOLD RIGHT" type="Sprite2D" parent="." unique_id=1637295111]
+position = Vector2(206.99998, 377)
+rotation = -0.009323478
 scale = Vector2(3.1799116, 3.1799116)
-texture = ExtResource("2_5j11q")
+texture = ExtResource("3_s6nxh")
+
+[node name="DAVEN HOLD RIGHT2" type="Sprite2D" parent="." unique_id=1861352896]
+position = Vector2(-246.00002, 379)
+rotation = -0.009323478
+scale = Vector2(3.1799116, 3.1799116)
+texture = ExtResource("3_rbqhu")
 
 [node name="Flipper" type="RigidBody2D" parent="." unique_id=1440842092]
-position = Vector2(-231, 400)
+position = Vector2(-178, 409)
 scale = Vector2(0.85376394, 0.90921205)
 freeze = true
 freeze_mode = 1
@@ -119,13 +114,13 @@ scale = Vector2(2.9600003, 2.9600003)
 shape = SubResource("RectangleShape2D_7jktm")
 
 [node name="Sprite2D" type="Sprite2D" parent="Flipper" unique_id=1918496878]
-position = Vector2(64.90106, 0.901062)
-rotation = -2.420959
-scale = Vector2(2.22, 2.22)
-texture = ExtResource("4_63oq4")
+position = Vector2(77.30474, -6.5991077)
+rotation = 0.120108485
+scale = Vector2(2.5698903, 2.5698903)
+texture = ExtResource("6_s6nxh")
 
 [node name="Flipper2" type="RigidBody2D" parent="." unique_id=2013578115]
-position = Vector2(78.21002, 401.0526)
+position = Vector2(131, 409.00003)
 scale = Vector2(0.85376394, 0.90921205)
 freeze = true
 freeze_mode = 1
@@ -137,13 +132,13 @@ scale = Vector2(2.9600003, 2.9600003)
 shape = SubResource("RectangleShape2D_7jktm")
 
 [node name="Sprite2D" type="Sprite2D" parent="Flipper2" unique_id=273800345]
-position = Vector2(-66.30722, 0.69278145)
-rotation = 2.4462025
+position = Vector2(-76.13346, -5.4992986)
+rotation = -0.050382614
 scale = Vector2(2.22, 2.22)
-texture = ExtResource("6_fv040")
+texture = ExtResource("8_s6nxh")
 
 [node name="Ball" type="RigidBody2D" parent="." unique_id=2008901649]
-position = Vector2(214, 325)
+position = Vector2(-20, -206)
 physics_material_override = SubResource("PhysicsMaterial_5j11q")
 gravity_scale = 1.5
 lock_rotation = true
@@ -179,6 +174,13 @@ shape = SubResource("CircleShape2D_f8h2c")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1502741029]
 
+[node name="TextureRect" type="ColorRect" parent="CanvasLayer" unique_id=169718508]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(13.54346, 2.717144)
+theme = SubResource("Theme_s6nxh")
+color = Color(0.72156864, 0.75686276, 0.12156863, 1)
+
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=1968121470]
 position = Vector2(44, 29.999998)
 scale = Vector2(1.7441342, 1.7441342)
@@ -211,6 +213,21 @@ theme_override_fonts/font = ExtResource("10_f8h2c")
 theme_override_font_sizes/font_size = 47
 text = "DAVEN"
 
+[node name="Life1" type="Sprite2D" parent="CanvasLayer" unique_id=1885655531]
+position = Vector2(352, 52)
+scale = Vector2(1.4894375, 1.4894375)
+texture = ExtResource("14_qmtrq")
+
+[node name="Life2" type="Sprite2D" parent="CanvasLayer" unique_id=1135445309]
+position = Vector2(426.2148, 52.044033)
+scale = Vector2(1.4894375, 1.4894375)
+texture = ExtResource("14_qmtrq")
+
+[node name="Life3" type="Sprite2D" parent="CanvasLayer" unique_id=2059344603]
+position = Vector2(501, 52)
+scale = Vector2(1.4894375, 1.4894375)
+texture = ExtResource("14_qmtrq")
+
 [node name="Walls" type="StaticBody2D" parent="." unique_id=1699044917]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls" unique_id=625357927]
@@ -232,7 +249,7 @@ rotation = -1.0859029
 shape = SubResource("RectangleShape2D_ltfqq")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Walls" unique_id=1719862569]
-position = Vector2(106.863556, 375.23938)
+position = Vector2(167.22443, 327.10544)
 rotation = -0.3401245
 shape = SubResource("RectangleShape2D_s6nxh")
 
@@ -241,38 +258,6 @@ position = Vector2(227, -406.00003)
 rotation = 0.7837351
 shape = SubResource("RectangleShape2D_rbqhu")
 
-[node name="Shooter" type="AnimatableBody2D" parent="." unique_id=707108275]
-position = Vector2(223, -100)
-scale = Vector2(0.7680159, 0.99848187)
-script = ExtResource("12_qmtrq")
-
-[node name="Sprite2D" type="Sprite2D" parent="Shooter" unique_id=634923324]
-position = Vector2(18.228779, 337.5124)
-scale = Vector2(9.684045, 8.723335)
-texture = ExtResource("13_qmtrq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Shooter" unique_id=1228239177]
-position = Vector2(-10.416452, 470.71466)
-scale = Vector2(1, 0.9999996)
-shape = SubResource("RectangleShape2D_gihg8")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Shooter" unique_id=708528757]
-position = Vector2(-61.84767, 221.8367)
-scale = Vector2(1, 0.99999946)
-shape = SubResource("RectangleShape2D_2euu5")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Shooter" unique_id=1510109319]
-position = Vector2(-60.399063, -226.35101)
-rotation = -1.559832
-scale = Vector2(0.9999997, 0.99999964)
-shape = SubResource("RectangleShape2D_qmtrq")
-one_way_collision = true
-
-[node name="Divider pole" type="Sprite2D" parent="." unique_id=1420555455]
-position = Vector2(171, 104)
-scale = Vector2(-8.817, 50)
-texture = ExtResource("15_4no2h")
-
 [node name="DrainZone" type="Area2D" parent="." unique_id=1383838595]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DrainZone" unique_id=872656610]
@@ -280,7 +265,7 @@ position = Vector2(-61, 469)
 shape = SubResource("RectangleShape2D_04cm2")
 
 [node name="LauncherSpawn" type="Marker2D" parent="." unique_id=918012094]
-position = Vector2(214, 325)
+position = Vector2(1, -92)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=977308171]
 
@@ -316,6 +301,13 @@ shape = SubResource("CircleShape2D_riuho")
 position = Vector2(133.01584, -134.04039)
 rotation = -0.57497424
 shape = SubResource("RectangleShape2D_4no2h")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=542362214]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1766631454]
+position = Vector2(-10.000001, -340)
+rotation = 0.0045811404
+shape = SubResource("RectangleShape2D_qmtrq")
 
 [connection signal="body_entered" from="Bumper/HitZone" to="Bumper" method="_on_hit_zone_body_entered"]
 [connection signal="body_entered" from="DrainZone" to="." method="_on_drain_zone_body_entered"]

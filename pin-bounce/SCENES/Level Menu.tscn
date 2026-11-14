@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bunc4rkhgakyx"]
 
 [ext_resource type="Texture2D" uid="uid://dxh2loj10lq2g" path="res://ART/Level Menu.png" id="1_c4mnj"]
+[ext_resource type="FontFile" uid="uid://kkvbts3uf0gg" path="res://ART/augiepixel.ttf" id="2_2ipby"]
 
 [node name="LevelMenu" type="Node2D" unique_id=1393051437]
 
@@ -9,3 +10,14 @@ offset_right = 94.0
 offset_bottom = 128.0
 scale = Vector2(5.7441626, 6.796307)
 texture = ExtResource("1_c4mnj")
+
+[node name="Label" type="Label" parent="." unique_id=1071739875]
+offset_left = 444.0
+offset_top = 341.0
+offset_right = 587.0
+offset_bottom = 370.0
+scale = Vector2(1.3144002, 1.3144002)
+theme_override_fonts/font = ExtResource("2_2ipby")
+theme_override_font_sizes/font_size = 12
+text = "Daven holding 
+hackclub flag!"

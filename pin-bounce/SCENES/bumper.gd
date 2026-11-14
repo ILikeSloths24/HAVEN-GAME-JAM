@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-@export var bounce_force := 600.0
+@export var bounce_force := 900.0
 @export var points := 10
 
 func _on_hit_zone_body_entered(body: Node2D) -> void:

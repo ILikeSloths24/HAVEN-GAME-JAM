@@ -12,8 +12,14 @@
 [ext_resource type="Texture2D" uid="uid://dxc22m41tvyx" path="res://ART/HACK CLUB FLAG2.png" id="8_s6nxh"]
 [ext_resource type="FontFile" uid="uid://kkvbts3uf0gg" path="res://ART/augiepixel.ttf" id="10_f8h2c"]
 [ext_resource type="Texture2D" uid="uid://53wg17d5caeq" path="res://ART/DAVENS!/DAVEN!.png" id="11_rbqhu"]
+[ext_resource type="Texture2D" uid="uid://5y2y2t627l7k" path="res://ART/DAVENS!/Shocked DAVEN.png" id="12_13r1y"]
 [ext_resource type="Texture2D" uid="uid://3sco0e6437ql" path="res://ART/speech bubble.png" id="12_gihg8"]
+[ext_resource type="Texture2D" uid="uid://tamf6j06oaot" path="res://ART/DAVENS!/love DAVEN!-export.png" id="14_04cm2"]
 [ext_resource type="Texture2D" uid="uid://loclvrsohoic" path="res://ART/DAVENS!/happy DAVEN!-export.png" id="14_qmtrq"]
+[ext_resource type="Texture2D" uid="uid://dj5bmrqk3yssm" path="res://ART/DAVENS!/Sad DAVEN!-export.png" id="15_rbqhu"]
+[ext_resource type="Texture2D" uid="uid://baqojn7m72g4s" path="res://ART/DAVENS!/sleepy DAVEN!-export.png" id="15_yqmr7"]
+[ext_resource type="Texture2D" uid="uid://cabx3d7bap1yo" path="res://ART/DAVENS!/smart DAVEN!-sheet.png" id="16_gihg8"]
+[ext_resource type="Texture2D" uid="uid://drir5oh7x3jja" path="res://ART/cloudddd.png" id="20_04cm2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7jktm"]
 size = Vector2(50, 28)
@@ -43,27 +49,6 @@ size = Vector2(133, 81)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_04cm2"]
 size = Vector2(465, 20)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_4no2h"]
-radius = 25.0
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_13r1y"]
-size = Vector2(52, 21)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_yqmr7"]
-size = Vector2(92.52325, 63.79298)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5t354"]
-size = Vector2(31, 87)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_wmg3d"]
-radius = 7.388228
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_riuho"]
-radius = 38.0
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4no2h"]
-size = Vector2(98.2043, 13.383926)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qmtrq"]
 size = Vector2(544, 117)
@@ -138,7 +123,7 @@ scale = Vector2(2.22, 2.22)
 texture = ExtResource("8_s6nxh")
 
 [node name="Ball" type="RigidBody2D" parent="." unique_id=2008901649]
-position = Vector2(-20, -206)
+position = Vector2(-22, -339)
 physics_material_override = SubResource("PhysicsMaterial_5j11q")
 gravity_scale = 1.5
 lock_rotation = true
@@ -153,8 +138,8 @@ scale = Vector2(2.7499998, 2.7499998)
 texture = ExtResource("7_ggca4")
 
 [node name="Bumper" type="StaticBody2D" parent="." unique_id=293018127]
-position = Vector2(-159, -198)
-scale = Vector2(4.5937514, 4.8125)
+position = Vector2(-236, -215)
+scale = Vector2(3.6102262, 3.7821403)
 script = ExtResource("8_63oq4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bumper" unique_id=1399780241]
@@ -169,6 +154,126 @@ texture = ExtResource("11_rbqhu")
 [node name="HitZone" type="Area2D" parent="Bumper" unique_id=1446779831]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bumper/HitZone" unique_id=523089958]
+position = Vector2(3.9183729, 1.8701298)
+shape = SubResource("CircleShape2D_f8h2c")
+
+[node name="Bumper2" type="StaticBody2D" parent="." unique_id=1219109062]
+position = Vector2(-179, -53)
+scale = Vector2(3.610224, 3.7821379)
+script = ExtResource("8_63oq4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bumper2" unique_id=675673826]
+position = Vector2(3.9183729, 1.8701298)
+shape = SubResource("CircleShape2D_ggca4")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bumper2" unique_id=1231944326]
+position = Vector2(3.9183664, -0.41558444)
+scale = Vector2(0.45419055, 0.45419055)
+texture = ExtResource("12_13r1y")
+
+[node name="HitZone" type="Area2D" parent="Bumper2" unique_id=1526349987]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bumper2/HitZone" unique_id=377864371]
+position = Vector2(3.9183729, 1.8701298)
+shape = SubResource("CircleShape2D_f8h2c")
+
+[node name="Bumper3" type="StaticBody2D" parent="." unique_id=1405382247]
+position = Vector2(93, 174)
+scale = Vector2(3.610224, 3.7821379)
+script = ExtResource("8_63oq4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bumper3" unique_id=1418645428]
+position = Vector2(3.9183729, 1.8701298)
+shape = SubResource("CircleShape2D_ggca4")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bumper3" unique_id=447896299]
+position = Vector2(3.9183664, -0.41558444)
+scale = Vector2(0.45419055, 0.45419055)
+texture = ExtResource("15_rbqhu")
+
+[node name="HitZone" type="Area2D" parent="Bumper3" unique_id=1623399761]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bumper3/HitZone" unique_id=205166734]
+position = Vector2(3.9183729, 1.8701298)
+shape = SubResource("CircleShape2D_f8h2c")
+
+[node name="Bumper4" type="StaticBody2D" parent="." unique_id=1682350577]
+position = Vector2(51, -74)
+scale = Vector2(3.610224, 3.7821379)
+script = ExtResource("8_63oq4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bumper4" unique_id=1759451974]
+position = Vector2(3.9183729, 1.8701298)
+shape = SubResource("CircleShape2D_ggca4")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bumper4" unique_id=1766978327]
+position = Vector2(3.9183664, -0.41558444)
+scale = Vector2(0.45419055, 0.45419055)
+texture = ExtResource("14_04cm2")
+
+[node name="HitZone" type="Area2D" parent="Bumper4" unique_id=747234859]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bumper4/HitZone" unique_id=2012197112]
+position = Vector2(3.9183729, 1.8701298)
+shape = SubResource("CircleShape2D_f8h2c")
+
+[node name="Bumper5" type="StaticBody2D" parent="." unique_id=2075410605]
+position = Vector2(-166, 199)
+scale = Vector2(3.6102216, 3.7821357)
+script = ExtResource("8_63oq4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bumper5" unique_id=759865519]
+position = Vector2(3.9183729, 1.8701298)
+shape = SubResource("CircleShape2D_ggca4")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bumper5" unique_id=142397471]
+position = Vector2(3.9183664, -0.41558444)
+scale = Vector2(0.45419055, 0.45419055)
+texture = ExtResource("15_yqmr7")
+
+[node name="HitZone" type="Area2D" parent="Bumper5" unique_id=1353182923]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bumper5/HitZone" unique_id=2033364864]
+position = Vector2(3.9183729, 1.8701298)
+shape = SubResource("CircleShape2D_f8h2c")
+
+[node name="Bumper6" type="StaticBody2D" parent="." unique_id=115929834]
+position = Vector2(175, -224.00002)
+scale = Vector2(3.6102316, 3.7821462)
+script = ExtResource("8_63oq4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bumper6" unique_id=877521811]
+position = Vector2(3.9183729, 1.8701298)
+shape = SubResource("CircleShape2D_ggca4")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bumper6" unique_id=527659998]
+position = Vector2(3.9183664, -0.41558444)
+scale = Vector2(0.45419055, 0.45419055)
+texture = ExtResource("14_qmtrq")
+
+[node name="HitZone" type="Area2D" parent="Bumper6" unique_id=1057899662]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bumper6/HitZone" unique_id=1862445291]
+position = Vector2(3.9183729, 1.8701298)
+shape = SubResource("CircleShape2D_f8h2c")
+
+[node name="Bumper7" type="StaticBody2D" parent="." unique_id=268484760]
+position = Vector2(-36.000004, 79.99999)
+scale = Vector2(3.610224, 3.7821379)
+script = ExtResource("8_63oq4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bumper7" unique_id=1310179887]
+position = Vector2(3.9183729, 1.8701298)
+shape = SubResource("CircleShape2D_ggca4")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bumper7" unique_id=19408226]
+position = Vector2(3.9183664, -0.41558444)
+scale = Vector2(0.45419055, 0.45419055)
+texture = ExtResource("16_gihg8")
+
+[node name="HitZone" type="Area2D" parent="Bumper7" unique_id=1760496534]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bumper7/HitZone" unique_id=231891503]
 position = Vector2(3.9183729, 1.8701298)
 shape = SubResource("CircleShape2D_f8h2c")
 
@@ -214,19 +319,36 @@ theme_override_font_sizes/font_size = 47
 text = "DAVEN"
 
 [node name="Life1" type="Sprite2D" parent="CanvasLayer" unique_id=1885655531]
-position = Vector2(352, 52)
+position = Vector2(352, 52.000004)
 scale = Vector2(1.4894375, 1.4894375)
 texture = ExtResource("14_qmtrq")
 
 [node name="Life2" type="Sprite2D" parent="CanvasLayer" unique_id=1135445309]
-position = Vector2(426.2148, 52.044033)
+position = Vector2(426.21478, 52.044033)
 scale = Vector2(1.4894375, 1.4894375)
-texture = ExtResource("14_qmtrq")
+texture = ExtResource("15_rbqhu")
 
 [node name="Life3" type="Sprite2D" parent="CanvasLayer" unique_id=2059344603]
 position = Vector2(501, 52)
 scale = Vector2(1.4894375, 1.4894375)
-texture = ExtResource("14_qmtrq")
+texture = ExtResource("16_gihg8")
+
+[node name="GameOverLabel" type="Label" parent="CanvasLayer" unique_id=52081641]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -234.0
+offset_top = -48.0
+offset_right = 234.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_f8h2c")
+theme_override_font_sizes/font_size = 70
+horizontal_alignment = 1
 
 [node name="Walls" type="StaticBody2D" parent="." unique_id=1699044917]
 
@@ -265,49 +387,56 @@ position = Vector2(-61, 469)
 shape = SubResource("RectangleShape2D_04cm2")
 
 [node name="LauncherSpawn" type="Marker2D" parent="." unique_id=918012094]
-position = Vector2(1, -92)
+position = Vector2(-23, -338)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=977308171]
+[node name="TOP COLLISION" type="StaticBody2D" parent="." unique_id=542362214]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1361881771]
-position = Vector2(-270, -73)
-shape = SubResource("CircleShape2D_4no2h")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1224517795]
-position = Vector2(-295, -103.000015)
-rotation = 0.5952921
-shape = SubResource("RectangleShape2D_13r1y")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=181963077]
-position = Vector2(115.00001, -51.000004)
-rotation = 0.36843303
-scale = Vector2(1.0337545, 1.5037581)
-shape = SubResource("RectangleShape2D_yqmr7")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=1791130737]
-position = Vector2(156.5, -32.5)
-shape = SubResource("RectangleShape2D_5t354")
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=349905352]
-position = Vector2(-27, -287)
-scale = Vector2(7.2988443, 5.5373015)
-shape = SubResource("CircleShape2D_wmg3d")
-
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D" unique_id=652980345]
-position = Vector2(-296, -232)
-shape = SubResource("CircleShape2D_riuho")
-
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D" unique_id=2132993153]
-position = Vector2(133.01584, -134.04039)
-rotation = -0.57497424
-shape = SubResource("RectangleShape2D_4no2h")
-
-[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=542362214]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1766631454]
-position = Vector2(-10.000001, -340)
-rotation = 0.0045811404
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TOP COLLISION" unique_id=1766631454]
+position = Vector2(-23, -337)
+rotation = 3.1361413
 shape = SubResource("RectangleShape2D_qmtrq")
+one_way_collision = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1408785486]
+position = Vector2(-162, -20.000004)
+scale = Vector2(2.7060294, 2.7060294)
+texture = ExtResource("20_04cm2")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1571470325]
+position = Vector2(-22.000002, 115.00001)
+scale = Vector2(2.7060294, 2.7060294)
+texture = ExtResource("20_04cm2")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=488921534]
+position = Vector2(-152.00002, 232.00002)
+scale = Vector2(2.7060182, 2.7060182)
+texture = ExtResource("20_04cm2")
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=397732030]
+position = Vector2(108.00001, 207)
+scale = Vector2(2.7060294, 2.7060294)
+texture = ExtResource("20_04cm2")
+
+[node name="Sprite2D5" type="Sprite2D" parent="." unique_id=2045162762]
+position = Vector2(64, -40.000004)
+scale = Vector2(2.7060294, 2.7060294)
+texture = ExtResource("20_04cm2")
+
+[node name="Sprite2D6" type="Sprite2D" parent="." unique_id=1197940307]
+position = Vector2(191.00002, -188.00002)
+scale = Vector2(2.7060406, 2.7060406)
+texture = ExtResource("20_04cm2")
+
+[node name="Sprite2D7" type="Sprite2D" parent="." unique_id=972634624]
+position = Vector2(-223.00002, -182.00002)
+scale = Vector2(2.7060406, 2.7060406)
+texture = ExtResource("20_04cm2")
 
 [connection signal="body_entered" from="Bumper/HitZone" to="Bumper" method="_on_hit_zone_body_entered"]
+[connection signal="body_entered" from="Bumper2/HitZone" to="Bumper2" method="_on_hit_zone_body_entered"]
+[connection signal="body_entered" from="Bumper3/HitZone" to="Bumper3" method="_on_hit_zone_body_entered"]
+[connection signal="body_entered" from="Bumper4/HitZone" to="Bumper4" method="_on_hit_zone_body_entered"]
+[connection signal="body_entered" from="Bumper5/HitZone" to="Bumper5" method="_on_hit_zone_body_entered"]
+[connection signal="body_entered" from="Bumper6/HitZone" to="Bumper6" method="_on_hit_zone_body_entered"]
+[connection signal="body_entered" from="Bumper7/HitZone" to="Bumper7" method="_on_hit_zone_body_entered"]
 [connection signal="body_entered" from="DrainZone" to="." method="_on_drain_zone_body_entered"]

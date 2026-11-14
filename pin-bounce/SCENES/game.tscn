@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://c0pekjhtv7svi" path="res://ART/635812117569314004_360.png" id="4_63oq4"]
 [ext_resource type="Script" uid="uid://djv833xpjlgfr" path="res://SCRIPTS/flipper_2.gd" id="5_f8h2c"]
 [ext_resource type="Texture2D" uid="uid://du4g5tvlsndfo" path="res://ART/i hope this works.png" id="6_fv040"]
-[ext_resource type="Texture2D" uid="uid://cpb8lv2i6hsb0" path="res://ART/New Piskel.png" id="7_5j11q"]
 [ext_resource type="Texture2D" uid="uid://bk2u3vjwfev55" path="res://ART/Sprite-0004.png" id="7_ggca4"]
 [ext_resource type="Script" uid="uid://be55s6yy3d5vx" path="res://SCENES/bumper.gd" id="8_63oq4"]
 [ext_resource type="FontFile" uid="uid://kkvbts3uf0gg" path="res://ART/augiepixel.ttf" id="10_f8h2c"]
@@ -28,35 +27,6 @@ bounce = 0.05
 radius = 27.018513
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ggca4"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_63oq4"]
-atlas = ExtResource("7_5j11q")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_f8h2c"]
-atlas = ExtResource("7_5j11q")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fv040"]
-atlas = ExtResource("7_5j11q")
-region = Rect2(0, 32, 32, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_3mqob"]
-animations = [{
-"frames": [{
-"duration": 0.8,
-"texture": SubResource("AtlasTexture_63oq4")
-}, {
-"duration": 0.8,
-"texture": SubResource("AtlasTexture_f8h2c")
-}, {
-"duration": 0.8,
-"texture": SubResource("AtlasTexture_fv040")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f8h2c"]
 radius = 11.972786
@@ -79,10 +49,13 @@ size = Vector2(14.322622, 734.11475)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qmtrq"]
 size = Vector2(164.26262, 14.205753)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_04cm2"]
+size = Vector2(465, 20)
+
 [node name="Node2D" type="Node2D" unique_id=979197503]
 script = ExtResource("1_fv040")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=105843388]
+[node name="Background" type="TextureRect" parent="." unique_id=105843388]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -100,13 +73,13 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(-23, 40)
 scale = Vector2(0.94845325, 1.3277599)
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=250751333]
+[node name="Log2" type="Sprite2D" parent="." unique_id=250751333]
 position = Vector2(-260, 368)
 rotation = -0.22555453
 scale = Vector2(3.4347417, 3.4347417)
 texture = ExtResource("2_5j11q")
 
-[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1637295111]
+[node name="Log" type="Sprite2D" parent="." unique_id=1637295111]
 position = Vector2(117, 375)
 rotation = 1.9915146
 scale = Vector2(3.1799116, 3.1799116)
@@ -172,34 +145,14 @@ script = ExtResource("8_63oq4")
 position = Vector2(3.9183729, 1.8701298)
 shape = SubResource("CircleShape2D_ggca4")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Bumper" unique_id=1358051117]
-sprite_frames = SubResource("SpriteFrames_3mqob")
-frame = 1
-frame_progress = 0.06812516
+[node name="Sprite2D" type="Sprite2D" parent="Bumper" unique_id=656948667]
+position = Vector2(3.9183664, -0.41558444)
+scale = Vector2(0.45419055, 0.45419055)
+texture = ExtResource("11_rbqhu")
 
 [node name="HitZone" type="Area2D" parent="Bumper" unique_id=1446779831]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bumper/HitZone" unique_id=523089958]
-position = Vector2(3.9183729, 1.8701298)
-shape = SubResource("CircleShape2D_f8h2c")
-
-[node name="Bumper2" type="StaticBody2D" parent="." unique_id=517555692]
-position = Vector2(13.000004, -55)
-scale = Vector2(4.5937514, 4.8125)
-script = ExtResource("8_63oq4")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bumper2" unique_id=278832726]
-position = Vector2(3.9183729, 1.8701298)
-shape = SubResource("CircleShape2D_ggca4")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Bumper2" unique_id=2138245415]
-sprite_frames = SubResource("SpriteFrames_3mqob")
-frame = 1
-frame_progress = 0.06812516
-
-[node name="HitZone" type="Area2D" parent="Bumper2" unique_id=14129082]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bumper2/HitZone" unique_id=204334034]
 position = Vector2(3.9183729, 1.8701298)
 shape = SubResource("CircleShape2D_f8h2c")
 
@@ -217,41 +170,52 @@ texture = ExtResource("12_gihg8")
 flip_v = true
 
 [node name="ScoreLabel" type="Label" parent="CanvasLayer" unique_id=757522189]
-offset_left = 116.0
-offset_top = 27.0
-offset_right = 268.0
-offset_bottom = 73.0
+offset_left = 111.0
+offset_top = 30.0
+offset_right = 263.0
+offset_bottom = 76.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("10_f8h2c")
 theme_override_font_sizes/font_size = 47
 text = "Score: 0"
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1699044917]
+[node name="DAVEN" type="Label" parent="CanvasLayer" unique_id=982331482]
+offset_left = 12.0
+offset_top = 50.000004
+offset_right = 164.0
+offset_bottom = 96.0
+scale = Vector2(0.57449985, 0.57449985)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_f8h2c")
+theme_override_font_sizes/font_size = 47
+text = "DAVEN"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=625357927]
+[node name="Walls" type="StaticBody2D" parent="." unique_id=1699044917]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls" unique_id=625357927]
 position = Vector2(-311, 38)
 shape = SubResource("RectangleShape2D_ltfqq")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1939461391]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls" unique_id=1939461391]
 position = Vector2(267, 32)
 shape = SubResource("RectangleShape2D_ltfqq")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1842466363]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls" unique_id=1842466363]
 position = Vector2(-35, -411.99997)
 rotation = -1.5727174
 shape = SubResource("RectangleShape2D_ltfqq")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=1258065452]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Walls" unique_id=1258065452]
 position = Vector2(-598, 169)
 rotation = -1.0859029
 shape = SubResource("RectangleShape2D_ltfqq")
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=1719862569]
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Walls" unique_id=1719862569]
 position = Vector2(106.863556, 375.23938)
 rotation = -0.3401245
 shape = SubResource("RectangleShape2D_s6nxh")
 
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D" unique_id=1254668660]
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Walls" unique_id=1254668660]
 position = Vector2(227, -406.00003)
 rotation = 0.7837351
 shape = SubResource("RectangleShape2D_rbqhu")
@@ -283,10 +247,19 @@ scale = Vector2(0.9999997, 0.99999964)
 shape = SubResource("RectangleShape2D_qmtrq")
 one_way_collision = true
 
-[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1420555455]
+[node name="Divider pole" type="Sprite2D" parent="." unique_id=1420555455]
 position = Vector2(181, 204)
 scale = Vector2(-5.289566, 29.998236)
 texture = ExtResource("14_4no2h")
 
+[node name="DrainZone" type="Area2D" parent="." unique_id=1383838595]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DrainZone" unique_id=872656610]
+position = Vector2(-61, 469)
+shape = SubResource("RectangleShape2D_04cm2")
+
+[node name="LauncherSpawn" type="Marker2D" parent="." unique_id=918012094]
+position = Vector2(214, 325)
+
 [connection signal="body_entered" from="Bumper/HitZone" to="Bumper" method="_on_hit_zone_body_entered"]
-[connection signal="body_entered" from="Bumper2/HitZone" to="Bumper2" method="_on_hit_zone_body_entered"]
+[connection signal="body_entered" from="DrainZone" to="." method="_on_drain_zone_body_entered"]

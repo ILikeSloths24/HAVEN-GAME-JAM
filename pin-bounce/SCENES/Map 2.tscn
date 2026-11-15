@@ -397,8 +397,8 @@ rotation = -1.0859029
 shape = SubResource("RectangleShape2D_ltfqq")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Walls" unique_id=1719862569]
-position = Vector2(167.22443, 327.10544)
-rotation = -0.3401245
+position = Vector2(194.99998, 333)
+rotation = -0.80804795
 shape = SubResource("RectangleShape2D_s6nxh")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Walls" unique_id=1254668660]
@@ -465,7 +465,7 @@ stream = ExtResource("23_ife3o")
 stream = ExtResource("12_7ifb1")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1556011219]
-position = Vector2(-162, -20.000004)
+position = Vector2(-163, -19)
 scale = Vector2(2.7060294, 2.7060294)
 stream = SubResource("AudioStreamMP3_7ifb1")
 volume_db = 3.493

@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://dwlnf5ja6ttwf"]
+
+[ext_resource type="Script" uid="uid://brtwnm2wnhng2" path="res://SCENES/help_screen.gd" id="1_4tcmp"]
+[ext_resource type="Texture2D" uid="uid://dnegwmdm6wskt" path="res://ART/Help screen.png" id="1_cevu5"]
+
+[node name="Control" type="Control" unique_id=1868088786]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4tcmp")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2042755516]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_cevu5")
+
+[node name="Label" type="Label" parent="TextureRect" unique_id=890526554]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -209.99998
+offset_top = 112.0
+offset_right = -81.999985
+offset_bottom = 112.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3.3574662, 3.3574662)
+text = "HELP
+
+CONTROLS:
+Q-LEFT FLIPPER
+E-RIGHT FLIPPER
+R-RESTART
+"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=1791381831]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(11.359999, 11.359999)
+
+[node name="Label" type="Label" parent="." unique_id=1480274791]
+layout_mode = 0
+offset_left = 21.0
+offset_top = -9.0
+offset_right = 61.0
+offset_bottom = 14.0
+scale = Vector2(2.48, 4.200001)
+text = "<-"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

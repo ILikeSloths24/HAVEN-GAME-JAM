@@ -7,19 +7,22 @@
 [ext_resource type="Texture2D" uid="uid://b8fyavboo8ve5" path="res://ART/DAVENS!/daven hold left.png" id="3_s6nxh"]
 [ext_resource type="Script" uid="uid://djv833xpjlgfr" path="res://SCRIPTS/flipper_2.gd" id="5_f8h2c"]
 [ext_resource type="Texture2D" uid="uid://cvjqi00ibsm0x" path="res://ART/HACK CLUB FLAG.png" id="6_s6nxh"]
-[ext_resource type="Texture2D" uid="uid://bk2u3vjwfev55" path="res://ART/Sprite-0004.png" id="7_ggca4"]
 [ext_resource type="Script" uid="uid://be55s6yy3d5vx" path="res://SCENES/bumper.gd" id="8_63oq4"]
 [ext_resource type="Texture2D" uid="uid://dxc22m41tvyx" path="res://ART/HACK CLUB FLAG2.png" id="8_s6nxh"]
+[ext_resource type="Texture2D" uid="uid://dn2ygluhrdmf4" path="res://ART/Sprite-0004-sheet.png" id="9_5t354"]
 [ext_resource type="FontFile" uid="uid://kkvbts3uf0gg" path="res://ART/augiepixel.ttf" id="10_f8h2c"]
 [ext_resource type="Texture2D" uid="uid://53wg17d5caeq" path="res://ART/DAVENS!/DAVEN!.png" id="11_rbqhu"]
 [ext_resource type="Texture2D" uid="uid://5y2y2t627l7k" path="res://ART/DAVENS!/Shocked DAVEN.png" id="12_13r1y"]
 [ext_resource type="Texture2D" uid="uid://3sco0e6437ql" path="res://ART/speech bubble.png" id="12_gihg8"]
+[ext_resource type="AudioStream" uid="uid://bwiubtl4p8qk8" path="res://SOUND/pink.mp3" id="12_wmg3d"]
 [ext_resource type="Texture2D" uid="uid://tamf6j06oaot" path="res://ART/DAVENS!/love DAVEN!-export.png" id="14_04cm2"]
 [ext_resource type="Texture2D" uid="uid://loclvrsohoic" path="res://ART/DAVENS!/happy DAVEN!-export.png" id="14_qmtrq"]
 [ext_resource type="Texture2D" uid="uid://dj5bmrqk3yssm" path="res://ART/DAVENS!/Sad DAVEN!-export.png" id="15_rbqhu"]
 [ext_resource type="Texture2D" uid="uid://baqojn7m72g4s" path="res://ART/DAVENS!/sleepy DAVEN!-export.png" id="15_yqmr7"]
 [ext_resource type="Texture2D" uid="uid://cabx3d7bap1yo" path="res://ART/DAVENS!/smart DAVEN!-sheet.png" id="16_gihg8"]
 [ext_resource type="Texture2D" uid="uid://drir5oh7x3jja" path="res://ART/cloudddd.png" id="20_04cm2"]
+[ext_resource type="Texture2D" uid="uid://6jjsgy58fbv7" path="res://ART/minecraft ahh heart.png" id="20_wmg3d"]
+[ext_resource type="AudioStream" uid="uid://bomahcwh648nf" path="res://GameOverMusic.mp3" id="21_yqmr7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7jktm"]
 size = Vector2(50, 28)
@@ -135,7 +138,7 @@ shape = SubResource("CircleShape2D_63oq4")
 [node name="Sprite2D" type="Sprite2D" parent="Ball" unique_id=218596478]
 position = Vector2(-43.000008, -20.000008)
 scale = Vector2(2.7499998, 2.7499998)
-texture = ExtResource("7_ggca4")
+texture = ExtResource("9_5t354")
 
 [node name="Bumper" type="StaticBody2D" parent="." unique_id=293018127]
 position = Vector2(-236, -215)
@@ -157,6 +160,9 @@ texture = ExtResource("11_rbqhu")
 position = Vector2(3.9183729, 1.8701298)
 shape = SubResource("CircleShape2D_f8h2c")
 
+[node name="BounceSound" type="AudioStreamPlayer" parent="Bumper" unique_id=2124749707]
+stream = ExtResource("12_wmg3d")
+
 [node name="Bumper2" type="StaticBody2D" parent="." unique_id=1219109062]
 position = Vector2(-179, -53)
 scale = Vector2(3.610224, 3.7821379)
@@ -176,6 +182,9 @@ texture = ExtResource("12_13r1y")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bumper2/HitZone" unique_id=377864371]
 position = Vector2(3.9183729, 1.8701298)
 shape = SubResource("CircleShape2D_f8h2c")
+
+[node name="BounceSound" type="AudioStreamPlayer" parent="Bumper2" unique_id=1885107666]
+stream = ExtResource("12_wmg3d")
 
 [node name="Bumper3" type="StaticBody2D" parent="." unique_id=1405382247]
 position = Vector2(93, 174)
@@ -197,6 +206,9 @@ texture = ExtResource("15_rbqhu")
 position = Vector2(3.9183729, 1.8701298)
 shape = SubResource("CircleShape2D_f8h2c")
 
+[node name="BounceSound" type="AudioStreamPlayer" parent="Bumper3" unique_id=113168034]
+stream = ExtResource("12_wmg3d")
+
 [node name="Bumper4" type="StaticBody2D" parent="." unique_id=1682350577]
 position = Vector2(51, -74)
 scale = Vector2(3.610224, 3.7821379)
@@ -216,6 +228,9 @@ texture = ExtResource("14_04cm2")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bumper4/HitZone" unique_id=2012197112]
 position = Vector2(3.9183729, 1.8701298)
 shape = SubResource("CircleShape2D_f8h2c")
+
+[node name="BounceSound" type="AudioStreamPlayer" parent="Bumper4" unique_id=1638129101]
+stream = ExtResource("12_wmg3d")
 
 [node name="Bumper5" type="StaticBody2D" parent="." unique_id=2075410605]
 position = Vector2(-166, 199)
@@ -237,6 +252,9 @@ texture = ExtResource("15_yqmr7")
 position = Vector2(3.9183729, 1.8701298)
 shape = SubResource("CircleShape2D_f8h2c")
 
+[node name="BounceSound" type="AudioStreamPlayer" parent="Bumper5" unique_id=149266907]
+stream = ExtResource("12_wmg3d")
+
 [node name="Bumper6" type="StaticBody2D" parent="." unique_id=115929834]
 position = Vector2(175, -224.00002)
 scale = Vector2(3.6102316, 3.7821462)
@@ -257,6 +275,9 @@ texture = ExtResource("14_qmtrq")
 position = Vector2(3.9183729, 1.8701298)
 shape = SubResource("CircleShape2D_f8h2c")
 
+[node name="BounceSound" type="AudioStreamPlayer" parent="Bumper6" unique_id=1843818495]
+stream = ExtResource("12_wmg3d")
+
 [node name="Bumper7" type="StaticBody2D" parent="." unique_id=268484760]
 position = Vector2(-36.000004, 79.99999)
 scale = Vector2(3.610224, 3.7821379)
@@ -276,6 +297,9 @@ texture = ExtResource("16_gihg8")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bumper7/HitZone" unique_id=231891503]
 position = Vector2(3.9183729, 1.8701298)
 shape = SubResource("CircleShape2D_f8h2c")
+
+[node name="BounceSound" type="AudioStreamPlayer" parent="Bumper7" unique_id=992047976]
+stream = ExtResource("12_wmg3d")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1502741029]
 
@@ -320,18 +344,18 @@ text = "DAVEN"
 
 [node name="Life1" type="Sprite2D" parent="CanvasLayer" unique_id=1885655531]
 position = Vector2(352, 52.000004)
-scale = Vector2(1.4894375, 1.4894375)
-texture = ExtResource("14_qmtrq")
+scale = Vector2(2.2915354, 2.2915354)
+texture = ExtResource("20_wmg3d")
 
 [node name="Life2" type="Sprite2D" parent="CanvasLayer" unique_id=1135445309]
 position = Vector2(426.21478, 52.044033)
-scale = Vector2(1.4894375, 1.4894375)
-texture = ExtResource("15_rbqhu")
+scale = Vector2(2.2915354, 2.2915354)
+texture = ExtResource("20_wmg3d")
 
 [node name="Life3" type="Sprite2D" parent="CanvasLayer" unique_id=2059344603]
 position = Vector2(501, 52)
-scale = Vector2(1.4894375, 1.4894375)
-texture = ExtResource("16_gihg8")
+scale = Vector2(2.2915354, 2.2915354)
+texture = ExtResource("20_wmg3d")
 
 [node name="GameOverLabel" type="Label" parent="CanvasLayer" unique_id=52081641]
 anchors_preset = 8
@@ -431,6 +455,12 @@ texture = ExtResource("20_04cm2")
 position = Vector2(-223.00002, -182.00002)
 scale = Vector2(2.7060406, 2.7060406)
 texture = ExtResource("20_04cm2")
+
+[node name="GameOverMusic" type="AudioStreamPlayer2D" parent="." unique_id=2124709169]
+stream = ExtResource("21_yqmr7")
+
+[node name="Plink" type="AudioStreamPlayer2D" parent="." unique_id=1273971788]
+stream = ExtResource("12_wmg3d")
 
 [connection signal="body_entered" from="Bumper/HitZone" to="Bumper" method="_on_hit_zone_body_entered"]
 [connection signal="body_entered" from="Bumper2/HitZone" to="Bumper2" method="_on_hit_zone_body_entered"]

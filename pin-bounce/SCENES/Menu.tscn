@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://dsctilsc27lkn"]
 
 [ext_resource type="Texture2D" uid="uid://0qyt2g6517qu" path="res://ART/MENU SCRENENENENENENE (1).png" id="1_b6gbn"]
-[ext_resource type="Script" uid="uid://b2ss0yve1hmo7" path="res://SCENES/menu.gd" id="1_g61l6"]
+[ext_resource type="Script" uid="uid://b2ss0yve1hmo7" path="res://SCRIPTS/menu.gd" id="1_g61l6"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_um74c"]
 

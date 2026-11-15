@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bunc4rkhgakyx"]
 
 [ext_resource type="Texture2D" uid="uid://dxh2loj10lq2g" path="res://ART/Level Menu.png" id="1_c4mnj"]
-[ext_resource type="Script" uid="uid://cgklaisfk5mfw" path="res://SCENES/level_menu.gd" id="1_l6qrg"]
+[ext_resource type="Script" uid="uid://cgklaisfk5mfw" path="res://SCRIPTS/level_menu.gd" id="1_l6qrg"]
 [ext_resource type="FontFile" uid="uid://kkvbts3uf0gg" path="res://ART/augiepixel.ttf" id="2_2ipby"]
 [ext_resource type="Texture2D" uid="uid://cg58ax0fxlimh" path="res://ART/LEVELSLSLSLS (1).png" id="4_xa182"]
 

@@ -7,7 +7,7 @@ var is_game_over := false
 @onready var score_label: Label = $CanvasLayer/ScoreLabel
 @onready var game_over_label: Label = $CanvasLayer/GameOverLabel
 @onready var launcher_spawn: Marker2D = $LauncherSpawn
-
+@onready var game_over_music: AudioStreamPlayer2D = $GameOverMusic
 @onready var life_icons: Array[Sprite2D] = [
 	$CanvasLayer/Life1,
 	$CanvasLayer/Life2,
@@ -36,6 +36,7 @@ func _on_drain_zone_body_entered(body: Node2D) -> void:
 			is_game_over = true
 			game_over_label.text = "GAME OVER\nFinal Score: " + str(score) + "\nPress R to Restart"
 			game_over_label.visible = true
+			game_over_music.play()
 			body.queue_free()
 
 

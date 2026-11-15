@@ -1,10 +1,472 @@
 [gd_scene format=3 uid="uid://bcnp7ljco4ys2"]
 
+[ext_resource type="Script" uid="uid://3euyonfm24n1" path="res://SCENES/game.gd" id="1_fjrlp"]
 [ext_resource type="Texture2D" uid="uid://bgy1yldd4n3bs" path="res://ART/Da other map.png" id="1_iwmc6"]
+[ext_resource type="Texture2D" uid="uid://b8fyavboo8ve5" path="res://ART/DAVENS!/daven hold left.png" id="3_ttfbl"]
+[ext_resource type="Texture2D" uid="uid://cmbncgevkhxa" path="res://ART/DAVENS!/daven hold right.png" id="4_x8pvr"]
+[ext_resource type="Script" uid="uid://i1gpkv6ddi8t" path="res://SCRIPTS/flipper.gd" id="5_7ifb1"]
+[ext_resource type="Texture2D" uid="uid://cvjqi00ibsm0x" path="res://ART/HACK CLUB FLAG.png" id="6_ife3o"]
+[ext_resource type="Script" uid="uid://djv833xpjlgfr" path="res://SCRIPTS/flipper_2.gd" id="7_wsaji"]
+[ext_resource type="Texture2D" uid="uid://dxc22m41tvyx" path="res://ART/HACK CLUB FLAG2.png" id="8_dxfwj"]
+[ext_resource type="Texture2D" uid="uid://dn2ygluhrdmf4" path="res://ART/Sprite-0004-sheet.png" id="9_x8pvr"]
+[ext_resource type="Script" uid="uid://be55s6yy3d5vx" path="res://SCENES/bumper.gd" id="10_huk78"]
+[ext_resource type="Texture2D" uid="uid://53wg17d5caeq" path="res://ART/DAVENS!/DAVEN!.png" id="11_r4xnj"]
+[ext_resource type="AudioStream" uid="uid://bwiubtl4p8qk8" path="res://SOUND/pink.mp3" id="12_7ifb1"]
+[ext_resource type="Texture2D" uid="uid://5y2y2t627l7k" path="res://ART/DAVENS!/Shocked DAVEN.png" id="12_y2vvf"]
+[ext_resource type="Texture2D" uid="uid://dj5bmrqk3yssm" path="res://ART/DAVENS!/Sad DAVEN!-export.png" id="13_jxgqr"]
+[ext_resource type="Texture2D" uid="uid://tamf6j06oaot" path="res://ART/DAVENS!/love DAVEN!-export.png" id="14_8x3mt"]
+[ext_resource type="Texture2D" uid="uid://baqojn7m72g4s" path="res://ART/DAVENS!/sleepy DAVEN!-export.png" id="15_i84tk"]
+[ext_resource type="Texture2D" uid="uid://loclvrsohoic" path="res://ART/DAVENS!/happy DAVEN!-export.png" id="16_shhec"]
+[ext_resource type="Texture2D" uid="uid://cabx3d7bap1yo" path="res://ART/DAVENS!/smart DAVEN!-sheet.png" id="17_qfsdv"]
+[ext_resource type="Texture2D" uid="uid://3sco0e6437ql" path="res://ART/speech bubble.png" id="18_qq0rl"]
+[ext_resource type="FontFile" uid="uid://kkvbts3uf0gg" path="res://ART/augiepixel.ttf" id="19_2145x"]
+[ext_resource type="Texture2D" uid="uid://6jjsgy58fbv7" path="res://ART/minecraft ahh heart.png" id="20_j86og"]
+[ext_resource type="Texture2D" uid="uid://drir5oh7x3jja" path="res://ART/cloudddd.png" id="21_7ci47"]
+[ext_resource type="AudioStream" uid="uid://bomahcwh648nf" path="res://GameOverMusic.mp3" id="23_ife3o"]
 
-[node name="Map2" type="Node2D" unique_id=2029770532]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7jktm"]
+size = Vector2(50, 28)
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1241550806]
-offset_right = 540.0
-offset_bottom = 870.0
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5j11q"]
+friction = 0.02
+bounce = 0.05
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_63oq4"]
+radius = 27.018513
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ggca4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f8h2c"]
+radius = 11.972786
+
+[sub_resource type="Theme" id="Theme_s6nxh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ltfqq"]
+size = Vector2(41, 920)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s6nxh"]
+size = Vector2(168.09953, 46.025787)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rbqhu"]
+size = Vector2(133, 81)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_04cm2"]
+size = Vector2(465, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qmtrq"]
+size = Vector2(544, 117)
+
+[node name="Node2D" type="Node2D" unique_id=979197503]
+script = ExtResource("1_fjrlp")
+
+[node name="Background" type="TextureRect" parent="." unique_id=105843388]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -293.0
+offset_top = -395.0
+offset_right = 355.0
+offset_bottom = 757.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.83394516, 0.75709456)
 texture = ExtResource("1_iwmc6")
+metadata/_edit_use_anchors_ = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1727861740]
+position = Vector2(-23, 40)
+scale = Vector2(0.94845325, 1.3277599)
+
+[node name="DAVEN HOLD RIGHT" type="Sprite2D" parent="." unique_id=1637295111]
+position = Vector2(206.99998, 377)
+rotation = -0.009323478
+scale = Vector2(3.1799116, 3.1799116)
+texture = ExtResource("3_ttfbl")
+
+[node name="DAVEN HOLD RIGHT2" type="Sprite2D" parent="." unique_id=1861352896]
+position = Vector2(-246.00002, 379)
+rotation = -0.009323478
+scale = Vector2(3.1799116, 3.1799116)
+texture = ExtResource("4_x8pvr")
+
+[node name="Flipper" type="RigidBody2D" parent="." unique_id=1440842092]
+position = Vector2(-178, 409)
+scale = Vector2(0.85376394, 0.90921205)
+freeze = true
+freeze_mode = 1
+script = ExtResource("5_7ifb1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Flipper" unique_id=1208230825]
+position = Vector2(66.90106, -0.09893799)
+scale = Vector2(2.9600003, 2.9600003)
+shape = SubResource("RectangleShape2D_7jktm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Flipper" unique_id=1918496878]
+position = Vector2(77.30474, -6.5991077)
+rotation = 0.120108485
+scale = Vector2(2.5698903, 2.5698903)
+texture = ExtResource("6_ife3o")
+
+[node name="Flipper2" type="RigidBody2D" parent="." unique_id=2013578115]
+position = Vector2(131, 409.00003)
+scale = Vector2(0.85376394, 0.90921205)
+freeze = true
+freeze_mode = 1
+script = ExtResource("7_wsaji")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Flipper2" unique_id=1279118693]
+position = Vector2(-70.30723, 0.69277954)
+scale = Vector2(2.9600003, 2.9600003)
+shape = SubResource("RectangleShape2D_7jktm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Flipper2" unique_id=273800345]
+position = Vector2(-76.13346, -5.4992986)
+rotation = -0.050382614
+scale = Vector2(2.22, 2.22)
+texture = ExtResource("8_dxfwj")
+
+[node name="Ball" type="RigidBody2D" parent="." unique_id=2008901649]
+position = Vector2(-22, -339)
+physics_material_override = SubResource("PhysicsMaterial_5j11q")
+gravity_scale = 1.5
+lock_rotation = true
+continuous_cd = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball" unique_id=1740048330]
+shape = SubResource("CircleShape2D_63oq4")
+
+[node name="Sprite2D" type="Sprite2D" parent="Ball" unique_id=218596478]
+position = Vector2(-43.000008, -20.000008)
+scale = Vector2(2.7499998, 2.7499998)
+texture = ExtResource("9_x8pvr")
+
+[node name="Bumper" type="StaticBody2D" parent="." unique_id=293018127]
+position = Vector2(-236, -215)
+scale = Vector2(3.6102262, 3.7821403)
+script = ExtResource("10_huk78")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bumper" unique_id=1399780241]
+position = Vector2(3.9183729, 1.8701298)
+shape = SubResource("CircleShape2D_ggca4")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bumper" unique_id=656948667]
+position = Vector2(3.9183664, -0.41558444)
+scale = Vector2(0.45419055, 0.45419055)
+texture = ExtResource("11_r4xnj")
+
+[node name="HitZone" type="Area2D" parent="Bumper" unique_id=1446779831]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bumper/HitZone" unique_id=523089958]
+position = Vector2(3.9183729, 1.8701298)
+shape = SubResource("CircleShape2D_f8h2c")
+
+[node name="BounceSound" type="AudioStreamPlayer" parent="Bumper" unique_id=2124749707]
+stream = ExtResource("12_7ifb1")
+
+[node name="Bumper2" type="StaticBody2D" parent="." unique_id=1219109062]
+position = Vector2(-179, -53)
+scale = Vector2(3.610224, 3.7821379)
+script = ExtResource("10_huk78")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bumper2" unique_id=675673826]
+position = Vector2(3.9183729, 1.8701298)
+shape = SubResource("CircleShape2D_ggca4")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bumper2" unique_id=1231944326]
+position = Vector2(3.9183664, -0.41558444)
+scale = Vector2(0.45419055, 0.45419055)
+texture = ExtResource("12_y2vvf")
+
+[node name="HitZone" type="Area2D" parent="Bumper2" unique_id=1526349987]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bumper2/HitZone" unique_id=377864371]
+position = Vector2(3.9183729, 1.8701298)
+shape = SubResource("CircleShape2D_f8h2c")
+
+[node name="BounceSound" type="AudioStreamPlayer" parent="Bumper2" unique_id=1885107666]
+stream = ExtResource("12_7ifb1")
+
+[node name="Bumper3" type="StaticBody2D" parent="." unique_id=1405382247]
+position = Vector2(93, 174)
+scale = Vector2(3.610224, 3.7821379)
+script = ExtResource("10_huk78")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bumper3" unique_id=1418645428]
+position = Vector2(3.9183729, 1.8701298)
+shape = SubResource("CircleShape2D_ggca4")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bumper3" unique_id=447896299]
+position = Vector2(3.9183664, -0.41558444)
+scale = Vector2(0.45419055, 0.45419055)
+texture = ExtResource("13_jxgqr")
+
+[node name="HitZone" type="Area2D" parent="Bumper3" unique_id=1623399761]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bumper3/HitZone" unique_id=205166734]
+position = Vector2(3.9183729, 1.8701298)
+shape = SubResource("CircleShape2D_f8h2c")
+
+[node name="BounceSound" type="AudioStreamPlayer" parent="Bumper3" unique_id=113168034]
+stream = ExtResource("12_7ifb1")
+
+[node name="Bumper4" type="StaticBody2D" parent="." unique_id=1682350577]
+position = Vector2(51, -74)
+scale = Vector2(3.610224, 3.7821379)
+script = ExtResource("10_huk78")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bumper4" unique_id=1759451974]
+position = Vector2(3.9183729, 1.8701298)
+shape = SubResource("CircleShape2D_ggca4")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bumper4" unique_id=1766978327]
+position = Vector2(3.9183664, -0.41558444)
+scale = Vector2(0.45419055, 0.45419055)
+texture = ExtResource("14_8x3mt")
+
+[node name="HitZone" type="Area2D" parent="Bumper4" unique_id=747234859]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bumper4/HitZone" unique_id=2012197112]
+position = Vector2(3.9183729, 1.8701298)
+shape = SubResource("CircleShape2D_f8h2c")
+
+[node name="BounceSound" type="AudioStreamPlayer" parent="Bumper4" unique_id=1638129101]
+stream = ExtResource("12_7ifb1")
+
+[node name="Bumper5" type="StaticBody2D" parent="." unique_id=2075410605]
+position = Vector2(-166, 199)
+scale = Vector2(3.6102216, 3.7821357)
+script = ExtResource("10_huk78")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bumper5" unique_id=759865519]
+position = Vector2(3.9183729, 1.8701298)
+shape = SubResource("CircleShape2D_ggca4")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bumper5" unique_id=142397471]
+position = Vector2(3.9183664, -0.41558444)
+scale = Vector2(0.45419055, 0.45419055)
+texture = ExtResource("15_i84tk")
+
+[node name="HitZone" type="Area2D" parent="Bumper5" unique_id=1353182923]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bumper5/HitZone" unique_id=2033364864]
+position = Vector2(3.9183729, 1.8701298)
+shape = SubResource("CircleShape2D_f8h2c")
+
+[node name="BounceSound" type="AudioStreamPlayer" parent="Bumper5" unique_id=149266907]
+stream = ExtResource("12_7ifb1")
+
+[node name="Bumper6" type="StaticBody2D" parent="." unique_id=115929834]
+position = Vector2(175, -224.00002)
+scale = Vector2(3.6102316, 3.7821462)
+script = ExtResource("10_huk78")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bumper6" unique_id=877521811]
+position = Vector2(3.9183729, 1.8701298)
+shape = SubResource("CircleShape2D_ggca4")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bumper6" unique_id=527659998]
+position = Vector2(3.9183664, -0.41558444)
+scale = Vector2(0.45419055, 0.45419055)
+texture = ExtResource("16_shhec")
+
+[node name="HitZone" type="Area2D" parent="Bumper6" unique_id=1057899662]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bumper6/HitZone" unique_id=1862445291]
+position = Vector2(3.9183729, 1.8701298)
+shape = SubResource("CircleShape2D_f8h2c")
+
+[node name="BounceSound" type="AudioStreamPlayer" parent="Bumper6" unique_id=1843818495]
+stream = ExtResource("12_7ifb1")
+
+[node name="Bumper7" type="StaticBody2D" parent="." unique_id=268484760]
+position = Vector2(-36.000004, 79.99999)
+scale = Vector2(3.610224, 3.7821379)
+script = ExtResource("10_huk78")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bumper7" unique_id=1310179887]
+position = Vector2(3.9183729, 1.8701298)
+shape = SubResource("CircleShape2D_ggca4")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bumper7" unique_id=19408226]
+position = Vector2(3.9183664, -0.41558444)
+scale = Vector2(0.45419055, 0.45419055)
+texture = ExtResource("17_qfsdv")
+
+[node name="HitZone" type="Area2D" parent="Bumper7" unique_id=1760496534]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bumper7/HitZone" unique_id=231891503]
+position = Vector2(3.9183729, 1.8701298)
+shape = SubResource("CircleShape2D_f8h2c")
+
+[node name="BounceSound" type="AudioStreamPlayer" parent="Bumper7" unique_id=992047976]
+stream = ExtResource("12_7ifb1")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1502741029]
+
+[node name="TextureRect" type="ColorRect" parent="CanvasLayer" unique_id=169718508]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(13.54346, 2.717144)
+theme = SubResource("Theme_s6nxh")
+color = Color(0.9882353, 0.5254902, 0.08627451, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=1968121470]
+position = Vector2(44, 29.999998)
+scale = Vector2(1.7441342, 1.7441342)
+texture = ExtResource("11_r4xnj")
+
+[node name="Sprite2D2" type="Sprite2D" parent="CanvasLayer" unique_id=778920732]
+position = Vector2(198, 43)
+scale = Vector2(3.906914, 2.936625)
+texture = ExtResource("18_qq0rl")
+flip_v = true
+
+[node name="ScoreLabel" type="Label" parent="CanvasLayer" unique_id=757522189]
+offset_left = 111.0
+offset_top = 30.0
+offset_right = 263.0
+offset_bottom = 76.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("19_2145x")
+theme_override_font_sizes/font_size = 47
+text = "Score: 0"
+
+[node name="DAVEN" type="Label" parent="CanvasLayer" unique_id=982331482]
+offset_left = 12.0
+offset_top = 50.000004
+offset_right = 164.0
+offset_bottom = 96.0
+scale = Vector2(0.57449985, 0.57449985)
+theme_override_colors/font_color = Color(0.72156864, 0.75686276, 0.12156863, 1)
+theme_override_fonts/font = ExtResource("19_2145x")
+theme_override_font_sizes/font_size = 47
+text = "DAVEN"
+
+[node name="Life1" type="Sprite2D" parent="CanvasLayer" unique_id=1885655531]
+position = Vector2(352, 52.000004)
+scale = Vector2(2.2915354, 2.2915354)
+texture = ExtResource("20_j86og")
+
+[node name="Life2" type="Sprite2D" parent="CanvasLayer" unique_id=1135445309]
+position = Vector2(426.21478, 52.044033)
+scale = Vector2(2.2915354, 2.2915354)
+texture = ExtResource("20_j86og")
+
+[node name="Life3" type="Sprite2D" parent="CanvasLayer" unique_id=2059344603]
+position = Vector2(501, 52)
+scale = Vector2(2.2915354, 2.2915354)
+texture = ExtResource("20_j86og")
+
+[node name="GameOverLabel" type="Label" parent="CanvasLayer" unique_id=52081641]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -234.0
+offset_top = -48.0
+offset_right = 234.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("19_2145x")
+theme_override_font_sizes/font_size = 70
+horizontal_alignment = 1
+
+[node name="Walls" type="StaticBody2D" parent="." unique_id=1699044917]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls" unique_id=625357927]
+position = Vector2(-311, 38)
+shape = SubResource("RectangleShape2D_ltfqq")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls" unique_id=1939461391]
+position = Vector2(267, 32)
+shape = SubResource("RectangleShape2D_ltfqq")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls" unique_id=1842466363]
+position = Vector2(-35, -411.99997)
+rotation = -1.5727174
+shape = SubResource("RectangleShape2D_ltfqq")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Walls" unique_id=1258065452]
+position = Vector2(-598, 169)
+rotation = -1.0859029
+shape = SubResource("RectangleShape2D_ltfqq")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Walls" unique_id=1719862569]
+position = Vector2(167.22443, 327.10544)
+rotation = -0.3401245
+shape = SubResource("RectangleShape2D_s6nxh")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Walls" unique_id=1254668660]
+position = Vector2(227, -406.00003)
+rotation = 0.7837351
+shape = SubResource("RectangleShape2D_rbqhu")
+
+[node name="DrainZone" type="Area2D" parent="." unique_id=1383838595]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DrainZone" unique_id=872656610]
+position = Vector2(-61, 469)
+shape = SubResource("RectangleShape2D_04cm2")
+
+[node name="LauncherSpawn" type="Marker2D" parent="." unique_id=918012094]
+position = Vector2(-23, -338)
+
+[node name="TOP COLLISION" type="StaticBody2D" parent="." unique_id=542362214]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TOP COLLISION" unique_id=1766631454]
+position = Vector2(-23, -337)
+rotation = 3.1361413
+shape = SubResource("RectangleShape2D_qmtrq")
+one_way_collision = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1408785486]
+position = Vector2(-162, -20.000004)
+scale = Vector2(2.7060294, 2.7060294)
+texture = ExtResource("21_7ci47")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1571470325]
+position = Vector2(-22.000002, 115.00001)
+scale = Vector2(2.7060294, 2.7060294)
+texture = ExtResource("21_7ci47")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=488921534]
+position = Vector2(-152.00002, 232.00002)
+scale = Vector2(2.7060182, 2.7060182)
+texture = ExtResource("21_7ci47")
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=397732030]
+position = Vector2(108.00001, 207)
+scale = Vector2(2.7060294, 2.7060294)
+texture = ExtResource("21_7ci47")
+
+[node name="Sprite2D5" type="Sprite2D" parent="." unique_id=2045162762]
+position = Vector2(64, -40.000004)
+scale = Vector2(2.7060294, 2.7060294)
+texture = ExtResource("21_7ci47")
+
+[node name="Sprite2D6" type="Sprite2D" parent="." unique_id=1197940307]
+position = Vector2(191.00002, -188.00002)
+scale = Vector2(2.7060406, 2.7060406)
+texture = ExtResource("21_7ci47")
+
+[node name="Sprite2D7" type="Sprite2D" parent="." unique_id=972634624]
+position = Vector2(-223.00002, -182.00002)
+scale = Vector2(2.7060406, 2.7060406)
+texture = ExtResource("21_7ci47")
+
+[node name="GameOverMusic" type="AudioStreamPlayer2D" parent="." unique_id=2124709169]
+stream = ExtResource("23_ife3o")
+
+[node name="Plink" type="AudioStreamPlayer2D" parent="." unique_id=1273971788]
+stream = ExtResource("12_7ifb1")
+
+[connection signal="body_entered" from="Bumper/HitZone" to="Bumper" method="_on_hit_zone_body_entered"]
+[connection signal="body_entered" from="Bumper2/HitZone" to="Bumper2" method="_on_hit_zone_body_entered"]
+[connection signal="body_entered" from="Bumper3/HitZone" to="Bumper3" method="_on_hit_zone_body_entered"]
+[connection signal="body_entered" from="Bumper4/HitZone" to="Bumper4" method="_on_hit_zone_body_entered"]
+[connection signal="body_entered" from="Bumper5/HitZone" to="Bumper5" method="_on_hit_zone_body_entered"]
+[connection signal="body_entered" from="Bumper6/HitZone" to="Bumper6" method="_on_hit_zone_body_entered"]
+[connection signal="body_entered" from="Bumper7/HitZone" to="Bumper7" method="_on_hit_zone_body_entered"]
+[connection signal="body_entered" from="DrainZone" to="." method="_on_drain_zone_body_entered"]

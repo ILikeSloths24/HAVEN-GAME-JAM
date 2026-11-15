@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dxh2loj10lq2g" path="res://ART/Level Menu.png" id="1_c4mnj"]
 [ext_resource type="Script" uid="uid://cgklaisfk5mfw" path="res://SCRIPTS/level_menu.gd" id="1_l6qrg"]
 [ext_resource type="FontFile" uid="uid://kkvbts3uf0gg" path="res://ART/augiepixel.ttf" id="2_2ipby"]
-[ext_resource type="Texture2D" uid="uid://cg58ax0fxlimh" path="res://ART/LEVELSLSLSLS (1).png" id="4_xa182"]
+[ext_resource type="Texture2D" uid="uid://6280g6vow5r" path="res://ART/LEVELSLSLSLS (3).png" id="4_l6qrg"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cn180"]
 
@@ -74,7 +74,7 @@ offset_top = 73.00001
 offset_right = 128.0
 offset_bottom = 201.0
 scale = Vector2(4.219437, 5.7250996)
-texture = ExtResource("4_xa182")
+texture = ExtResource("4_l6qrg")
 
 [node name="Button" type="Button" parent="." unique_id=2117487209]
 offset_left = 174.00002
@@ -111,13 +111,6 @@ theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_h4joh"
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_6ukmm")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_jdyv5")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_a3tuo")
-
-[node name="Button3" type="Button" parent="." unique_id=465301778]
-offset_left = 165.0
-offset_top = 558.0
-offset_right = 173.0
-offset_bottom = 566.0
-scale = Vector2(25.743074, 9.836334)
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

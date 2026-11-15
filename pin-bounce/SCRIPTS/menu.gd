@@ -5,3 +5,6 @@ func _on_button_pressed() -> void:
 
 func _on_button_2_pressed() -> void:
 	get_tree().quit()
+
+func _on_button_3_pressed():
+	$LobbyMusic.stream_paused = !$LobbyMusic.stream_paused
